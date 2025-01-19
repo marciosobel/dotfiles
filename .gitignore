@@ -1,0 +1,4 @@
+lazy-lock.json
+.config/tmux/plugins
+fish/*
+!fish/config.fish
