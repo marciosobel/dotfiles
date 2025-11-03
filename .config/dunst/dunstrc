@@ -1,0 +1,24 @@
+[global]
+follow = keyboard 
+width = (0, 500)
+notification_limit = 5
+origin = top-center
+offset = (0, -30)
+
+icon_corner_radius = 6
+gap_size = 1
+
+font = JetBrainsMonoNF 12
+format = "<i>%a</i>\n<b>%s</b>\n%b"
+stack_duplicates = false
+enable_recursive_icon_lookup = true
+
+corner_radius = 8
+
+background = "#1f1f28f7"
+foreground = "#dcd7ba"
+frame_color = "#00000000"
+
+max_icon_size = 64
+min_icon_size = 64
+icon_position = left
