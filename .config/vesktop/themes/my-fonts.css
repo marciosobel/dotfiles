@@ -1,0 +1,26 @@
+/**
+ * @name Nunito + JetBrains Mono
+ * @author marci.png
+ * @version 1.420.69.1 
+ * @description Change fonts of discord, using Nunito as the main font and JetBrains Mono for code.
+ **/
+
+@font-face {
+    font-family: "Nunito";
+    src: url('fonts/nunito/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url('fonts/jetbrains/JetBrainsMonoNerdFont-Regular.ttf');
+}
+
+:root {
+    --font-primary: "Nunito";
+    --font-headline: "Nunito";
+    --font-code: "JetBrains Mono";
+    --font-display: "Nunito";
+    /* above line changes the primary font only. You can also change the ones below (remove this line to activate the lines below)
+    --font-display: "Roboto";
+    --font-headline: "Roboto";
+    --font-code: "Roboto"; /* you should use a monospace font for this */
+}
