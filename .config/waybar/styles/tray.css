@@ -1,0 +1,52 @@
+#tray {
+  margin: 0px 8px;
+}
+
+#tray menu {
+  color: rgb(202, 211, 245);
+  background-color: @background;
+  padding: 5px;
+  border-radius: 6px;
+  border: none;
+}
+
+#tray window {
+  background-color: @transparent;
+}
+
+#tray menu separator {
+  background-color: @selection_background;
+  opacity: 0.5;
+}
+
+#tray menuitem {
+  border: none;
+}
+
+#tray menuitem:hover {
+  color: @selection_foreground;
+  background-color: @selection_background;
+  border-radius: 6px;
+  border: none;
+}
+
+#tray menuitem check {
+  border: 1.25px solid @foreground;
+  transition: none;
+}
+
+#tray menuitem check:hover {
+  border: 1.25px solid @selection_foreground;
+}
+
+#tray menuitem check:checked {
+  border: 1.25px solid @green;
+  background-color: @green;
+  color: @foreground;
+}
+
+#tray menuitem check:checked:hover {
+  border: 1.25px solid @green2;
+  background-color: @green2;
+  color: @white2;
+}

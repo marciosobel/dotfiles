@@ -1,0 +1,40 @@
+@import url("../colors/current.css");
+
+/* left */
+@import url("./styles/workspaces.css");
+
+/* middle */
+@import url("./styles/taskbar.css");
+
+/* right */
+@import url("./styles/tray.css");
+
+.modules-right {
+    padding: 0px 2px;
+}
+.modules-right > * > * {
+    margin: 0px 5px;
+}
+
+/* common styles */
+@import url("./styles/common.css");
+
+#language,
+#clock,
+#network {
+  color: @foreground;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+#network.disconnected {
+  color: @white;
+  opacity: 0.5;
+}
+
+#custom-notification {
+  color: @base3;
+  font-weight: bold;
+}

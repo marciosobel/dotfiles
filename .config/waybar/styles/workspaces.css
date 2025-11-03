@@ -1,0 +1,31 @@
+#workspaces button {
+    all: unset;
+    padding: 4px 10px;
+    color: @selection_foreground;
+    font-size: 16px;
+    transition: all .2s ease;
+}
+
+#workspaces button:hover {
+    color: @selection_foreground;
+    opacity: 0.8;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+#workspaces button.active {
+    color: @white2;
+    border: none;
+}
+
+#workspaces button.empty, #workspaces button .persistent {
+    color: @selection_foreground;
+    opacity: 0.5;
+    border: none;
+}
+
+#workspaces button.empty:hover, #workspaces button.persistent:hover {
+    color: @white2;
+    border: none;
+    transition: all 0.5s ease;
+}

@@ -1,0 +1,24 @@
+{
+  "include": ["~/.config/waybar/modules.jsonc"],
+  "layer": "top",
+  "position": "top",
+  "margin": "5 10 0 10",
+  "height": 30,
+  "reload_style_on_change": true,
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock#time"
+  ],
+
+  "modules-right": [
+    "tray",
+    "mpris",
+    "network",
+    "custom/notification",
+    "user"
+  ]
+}

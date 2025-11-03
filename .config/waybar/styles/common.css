@@ -1,0 +1,19 @@
+window#waybar {
+  font-family: 'Comfortaa';
+  background-color: @transparent;
+}
+
+.modules-left,
+.modules-right,
+.modules-center {
+  border-radius: 6px;
+}
+
+.modules-left,
+.modules-right {
+  background-color: @background;
+}
+
+.modules-center {
+    background-color: @transparent;
+}

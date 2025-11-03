@@ -1,0 +1,83 @@
+{
+  "clock#time": {
+    "format": "{:%I:%M %p}",
+    "tooltip": false
+  },
+
+  "hyprland/language": {
+    "format-en": "en",
+    "format-pt": "br"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 10,
+    "show-passive-items": true
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "1": "",
+      "2": "󰈹",
+      "3": ""
+    },
+    "persistent-workspaces": {
+      "*": 5
+    }
+  },
+
+  "wlr/taskbar": {
+    "format": "{icon}",
+    "tooltip-format": "{name}",
+    "icon-size": 20,
+    "on-click": "activate",
+    "on-right-click": "close"
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": " ",
+      "none": " ",
+      "dnd-notification": " ",
+      "dnd-none": " "
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+    "escape": true
+  },
+
+  "network": {
+    "format": " ",
+    "tooltip": false
+  },
+
+  "user": {
+      "icon": true,
+      "width": 20,
+      "height": 20,
+      "format": ""
+  },
+
+  "mpris": {
+      "format": "{player_icon} {dynamic}",
+      "format": "{status_icon} <i>{dynamic}</i>",
+      "player-icons": {
+          "spotify": " ",
+          "firefox": " ",
+          "chromium": " ",
+          "default": " "
+      },
+      "status-icons": {
+          "Playing": " ",
+          "Paused": " ",
+          "Stopped": " "
+      }
+  }
+}
