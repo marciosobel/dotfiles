@@ -1,0 +1,20 @@
+{
+	"version": "1.0.0",
+	"appearance": "dark",
+	"icon": "./kanagawa.webp",
+	"name": "Kanagawa Paper",
+	"description": "Remixed light and dark Kanagawa color scheme with muted colors.",
+	"palette": {
+	  "background": "#1F1F28",
+	  "foreground": "#DCD7BA",
+	  "blue": "#223249",
+	  "green": "#76946A",
+	  "magenta": "#B35B79",
+	  "orange": "#FFA066",
+	  "purple": "#5D57A3",
+	  "red": "#C34043",
+	  "yellow": "#C0A36E",
+	  "cyan": "#7E9CD8"
+	}
+}
+
