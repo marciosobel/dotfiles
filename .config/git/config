@@ -1,0 +1,65 @@
+[user]
+    name = Márcio Sobel
+    email = marciosobel@proton.me
+    signingkey = 870AC7B531100159
+
+[core]
+    compression = 9
+    whitespace = error
+    preloadindex = true
+
+[url "git@github.com:marciosobel/"]
+    insteadOf = "me:"
+
+[url "git@github.com:V3L0Z-recife/"]
+    insteadOf = "vz:"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[init]
+    defaultBranch = dev
+
+[status]
+    branch = true
+    showStash = true
+    showUntrackedFiles = all
+
+[commit]
+    gpgSign = true
+    verbose = true
+
+[log]
+    abbrevCommit = true 
+    graphColors  = blue,yellow,cyan,magenta,green,red
+
+[pager]
+    branch = false
+    tag = false
+
+[interactive]
+    singlekey = true
+
+[push]
+    autoSetupRemote = true
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = -taggerdate
+
+[color "branch"]
+    current  = magenta
+    local    = default
+    remote   = yellow
+    upstream = green
+    plain    = blue
+
+[color.decorate]
+    HEAD = red
+    branch = blue
+    tag = yellow
+    remoteBranch = magenta
+
+
