@@ -13,6 +13,9 @@ return {
 				javascript = { "prettier", "prettierd" },
 				typescriptreact = { "prettier", "prettierd" },
 				javascriptreact = { "prettier", "prettierd" },
+				vue = { "prettier", "prettierd" },
+				java = { "google-java-format" },
+				python = { "black" },
 			},
 			defult_format_opts = {
 				lsp_format = "fallback",

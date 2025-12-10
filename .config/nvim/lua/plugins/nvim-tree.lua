@@ -8,7 +8,7 @@ return {
 			hijack_cursor = true,
 			live_filter = { prefix = " ", always_show_folders = false },
 			filters = { custom = { "^\\.git$" }, dotfiles = false },
-			view = { side = "right", width = 40, preserve_window_proportions = true },
+			view = { side = "left", width = 40, preserve_window_proportions = true },
 			on_attach = function(bufnr)
 				local api = require("nvim-tree.api")
 				api.config.mappings.default_on_attach(bufnr)

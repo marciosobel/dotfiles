@@ -66,8 +66,13 @@
   },
 
   "mpris": {
-      "format": "{player_icon} {dynamic}",
-      "format": "{status_icon} <i>{dynamic}</i>",
+      // "format": "{player_icon} {status_icon} {title} (<i>{position}/{length}</i>)",
+      // "format-paused": "{player_icon} {status_icon} {title} (<i>{position}/{length}</i>)",
+      "format": "{status_icon} {title}",
+      "format-paused": "{status_icon} {title}",
+      // "format": "{status_icon} {title}(<i>{position}/{length}</i>)",
+      // "format-paused": "{status_icon} {title} (<i>{position}/{length}</i>)",
+      "interval": 1,
       "player-icons": {
           "spotify": " ",
           "firefox": " ",
@@ -75,9 +80,9 @@
           "default": " "
       },
       "status-icons": {
-          "Playing": " ",
-          "Paused": " ",
-          "Stopped": " "
+          "playing": " ",
+          "paused": " ",
+          "stopped": " "
       }
   }
 }

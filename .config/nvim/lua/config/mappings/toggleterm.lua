@@ -3,7 +3,7 @@ return {
 		{ { "n", "t" }, "<M-i>", "<cmd>ToggleTerm<CR>", { desc = "Toggle Floating Terminal", silent = true } },
 		{
 			"n",
-			"<leader>h",
+			"<leader>th",
 			function()
 				local Terminal = require("toggleterm.terminal").Terminal
 				Terminal:new({
@@ -17,7 +17,7 @@ return {
 		},
 		{
 			"n",
-			"<leader>v",
+			"<leader>tv",
 			function()
 				local Terminal = require("toggleterm.terminal").Terminal
 				Terminal:new({

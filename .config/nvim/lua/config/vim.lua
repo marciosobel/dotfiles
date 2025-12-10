@@ -65,11 +65,11 @@ vim.diagnostic.config({
 	update_in_insert = true,
 	float = {
 		format = function(diagnostic)
-			local MAX_MESSAGE_LENGTH = 240
 			local message = diagnostic.message
-			if #message > MAX_MESSAGE_LENGTH then
-				message = message:sub(1, MAX_MESSAGE_LENGTH - 3) .. "..."
-			end
+			-- local MAX_MESSAGE_LENGTH = 240
+			-- if #message > MAX_MESSAGE_LENGTH then
+			-- 	message = message:sub(1, MAX_MESSAGE_LENGTH - 3) .. "..."
+			-- end
 			return string.format("%s %s", get_icon_from_diagnostic(diagnostic), message)
 		end,
 	},

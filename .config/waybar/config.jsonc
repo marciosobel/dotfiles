@@ -15,8 +15,8 @@
   ],
 
   "modules-right": [
-    "tray",
     "mpris",
+    "tray",
     "network",
     "custom/notification",
     "user"

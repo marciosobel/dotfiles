@@ -1,7 +1,7 @@
 local function lsp_servers(on_attach, on_init, capabilities)
 	-- servers to be used with default configs
 	local servers = {
-		"vtsls",
+		"ts_ls",
 		"prismals",
 		"html",
 		"cssls",
@@ -10,6 +10,7 @@ local function lsp_servers(on_attach, on_init, capabilities)
 		"qmlls",
 		"tailwindcss",
 		"markdown_oxide",
+		"vue_ls",
 	}
 
 	for _, server in ipairs(servers) do
