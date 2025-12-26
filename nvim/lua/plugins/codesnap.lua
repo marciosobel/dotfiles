@@ -1,0 +1,14 @@
+return {}
+-- return {
+-- 	{
+-- 		"mistricky/codesnap.nvim",
+-- 		build = "make",
+-- 		tag = "v2.0.0-beta.17",
+-- 		opts = {
+-- 			bg_theme = "peach",
+-- 			watermark = "",
+-- 			mac_window_bar = false,
+-- 			has_line_number = true,
+-- 		},
+-- 	},
+-- }

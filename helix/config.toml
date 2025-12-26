@@ -1,0 +1,52 @@
+theme = "ferra"
+
+[editor]
+line-number = "relative"
+rulers = [80, 120]
+end-of-line-diagnostics = "hint"
+bufferline = "multiple"
+cursorline = false
+popup-border = "all"
+scrolloff = 8
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+separator = "•"
+left = ["spinner", "mode", "separator", "spacer", "version-control"]
+center = ["read-only-indicator", "file-modification-indicator", "file-name", "diagnostics"]
+right = ["file-type", "separator", "selections", "register", "position", "file-encoding"]
+
+[editor.file-picker]
+hidden = false
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[keys.normal]
+X = "select_line_above"
+x = "select_line_below"
+C-y = [
+  ':sh rm -f /tmp/unique-file',
+  ':insert-output yazi %{buffer_name} --chooser-file=/tmp/unique-file',
+  ':insert-output echo "\x1b[?1049h\x1b[?2004h" > /dev/tty',
+  ':open %sh{cat /tmp/unique-file}',
+  ':redraw',
+]
+
+[keys.normal.space]
+x = ":bc"
+X = ":bc!"
+
+[keys.select]
+X = "select_line_above"
+x = "select_line_below"
+
+[keys.insert]
+C-space = "completion"

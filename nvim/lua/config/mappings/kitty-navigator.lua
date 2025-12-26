@@ -1,0 +1,36 @@
+return {
+	-- map = {
+	-- 	{
+	-- 		"n",
+	-- 		"<C-h>",
+	-- 		function()
+	-- 			require("kitty-navigator").navigate_left()
+	-- 		end,
+	-- 		{ desc = "Move left a Split" },
+	-- 	},
+	-- 	{
+	-- 		"n",
+	-- 		"<C-j>",
+	-- 		function()
+	-- 			require("kitty-navigator").navigate_down()
+	-- 		end,
+	-- 		{ desc = "Move down a Split" },
+	-- 	},
+	-- 	{
+	-- 		"n",
+	-- 		"<C-k>",
+	-- 		function()
+	-- 			require("kitty-navigator").navigate_up()
+	-- 		end,
+	-- 		{ desc = "Move up a Split" },
+	-- 	},
+	-- 	{
+	-- 		"n",
+	-- 		"<C-l>",
+	-- 		function()
+	-- 			require("kitty-navigator").navigate_right()
+	-- 		end,
+	-- 		{ desc = "Move right a Split" },
+	-- 	},
+	-- },
+}

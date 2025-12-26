@@ -1,0 +1,53 @@
+## LANGUAGE CONFIGS
+[language-server]
+julia = { command = "jetls", args = ["--threads=auto", "--"] }
+eslint = { command = "eslint-lsp", args = ["--stdio"] }
+
+[[language]]
+name = "julia"
+formatter = { command = "jlfmt", args = ["--style=sciml"]  }
+
+[[language]]
+name = "go"
+formatter = { command = "goimports" }
+
+[[language]]
+name = "typescript"
+auto-format = true
+formatter = { command = "prettierd", args = ["--stdin-filepath", "%{buffer_name}"] }
+language-servers = ["typescript-language-server", "eslint"]
+
+[[language]]
+name = "tsx"
+auto-format = true
+formatter = { command = "prettierd", args = ["--stdin-filepath", "%{buffer_name}"] }
+language-servers = ["typescript-language-server", "eslint"]
+
+[[language]]
+name = "rust"
+auto-format = true
+formatter = { command = "rustfmt" }
+
+[[language]]
+name = "vue"
+scope = "source.vue"
+injection-regex = "vue"
+file-types = ["vue"]
+auto-format = true
+formatter = { command = "prettierd", args = ["--stdin-filepath", "%{buffer_name}"] }
+language-servers = [
+  "vuels",
+  "eslint",
+  "typescript-language-server",
+  # "vscode-html-language-server",
+  # "vscode-css-language-server"
+]
+indent = { tab-width = 4, unit = "    " }
+
+## LSP CONFIGS
+[language-server.vuels]
+command = "pnpm"
+args = ["@vue/language-server", "--stdio"]
+
+[language-server.typescript-language-server.config]
+plugins = [{ name = "@vue/typescript-plugin", location = "@vue/language-server", languages = ["vue"] }]
