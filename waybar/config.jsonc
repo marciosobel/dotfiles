@@ -1,0 +1,75 @@
+{
+  "position": "top",
+  "height": 30,
+  "fixed-center": true,
+  "reload_style_on_change": true,
+  "spacing": 10,
+
+  "modules-left": [
+    "custom/icon",
+    "hyprland/workspaces"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "tray",
+    "hyprland/language",
+    "privacy",
+    "network",
+    "image"
+  ],
+
+  "custom/icon": {
+    "format": " "
+  },
+
+  "tray": {
+    "spacing": 10
+  },
+
+  "image": {
+    "path": "/home/marci/Pictures/mae.png",
+    "size": 20
+  },
+
+  "privacy": {
+    "icon-size": 14,
+    "modules": [ { "type": "screenshare" } ]
+  },
+
+  "network": {
+   "format": " ",
+   "format-disconnected": " "
+  },
+
+  "hyprland/language": {
+    "format-pt": "br",
+    "format-en": "en"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "●",
+      "default": "○", 
+    }
+  },
+
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode-mon-col": 3,
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions":  {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  }
+}

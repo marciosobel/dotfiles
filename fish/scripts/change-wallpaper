@@ -1,0 +1,59 @@
+#!/bin/bash
+WALLPAPERS_DIR="$HOME/Pictures/wallpapers"
+CACHE_DIR="$HOME/.cache/wallpaper-selector"
+THUMBNAIL_WIDTH="100"
+THUMBNAIL_HEIGHT="200"
+
+mkdir -p "$CACHE_DIR"
+
+generate_thumbnail() {
+    local input="$1"
+    local output="$2"
+    magick "$input" -thumbnail "${THUMBNAIL_WIDTH}x${THUMBNAIL_HEIGHT}^" -gravity center -extent "${THUMBNAIL_WIDTH}x${THUMBNAIL_HEIGHT}" "$output"
+}
+
+generate_menu() {
+  for img in "$WALLPAPERS_DIR"/*.{jpg,jpeg,png}; do
+    [[ -f "$img" ]] || continue
+    
+    thumbnail="$CACHE_DIR/$(basename "${img%.*}").png"
+    if [[ ! -f "$thumbnail" ]] || [[ "$img" -nt "$thumbnail" ]]; then
+        generate_thumbnail "$img" "$thumbnail"
+    fi
+    
+    echo -en "img:$thumbnail:text:$(basename "$img" ".${img##*.}")\n"
+  done
+}
+
+set_wallpaper() {
+  local selected="$1"
+  thumbnail_path="${selected#img:}"
+
+  # Get the original filename from the thumbnail path
+  original_filename=$(basename "${thumbnail_path%.*}")
+
+  # Find the corresponding original file in the wallpaper directory
+  original_path=$(find "$WALLPAPERS_DIR" -type f -name "${original_filename}.*" | head -n1)
+
+  if [ -n "$original_path" ]; then
+      awww img "$original_path" -t grow --transition-fps 165 --transition-step 200 
+
+      # Save the selection for persistence
+      echo "$original_path" > "$HOME/.cache/current_wallpaper"
+  fi
+}
+
+selected=$(generate_menu | wofi --show dmenu \
+    --cache-file /dev/null \
+    --define "image_size=${THUMBNAIL_WIDTH}" \
+    --lines 4 \
+    --columns 1 \
+    --allow-images \
+    --insensitive \
+    --sort-order=alphabetical \
+    --prompt "Select wallpaper"
+  )
+
+if [ -n "$selected" ]; then
+  set_wallpaper "$selected"
+fi

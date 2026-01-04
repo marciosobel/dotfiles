@@ -1,0 +1,32 @@
+window#waybar {
+  font-family: Nunito, Symbols-Only;
+  background-color: #1e1e2e;
+  color: #cdd6f4;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+  margin-top: 0px;
+}
+
+.modules-left {
+  padding-left: 10px;
+}
+
+.modules-right {
+  padding-right: 10px;
+}
+
+#workspaces button {
+    all: unset;
+    padding: 0px 5px;
+    margin-bottom: 2px;
+    font-size: 12px;
+    transition: all .1s ease;
+    opacity: 0.5;
+}
+
+#workspaces button.active {
+  opacity: 1;
+}

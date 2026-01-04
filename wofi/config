@@ -1,0 +1,12 @@
+width=800
+allow_images=true
+image_size=40
+term=kitty
+insensitive=true
+location=center
+normal_window=true
+no_actions=true
+prompt=Search
+normal_window=false
+lines=10
+hide_scroll=true

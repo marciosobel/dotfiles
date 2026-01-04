@@ -2,7 +2,7 @@ layout {
 	pane split_direction="vertical" {
 		pane size="70%" focus=true name="main"
 		pane split_direction="horizontal" {
-			pane command="pnpm" borderless=true {
+			pane command="pnpm" {
 				args "tauri" "dev"
 				start_suspended true
 			}

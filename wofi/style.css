@@ -1,0 +1,43 @@
+window {
+  background-color: #181825;
+  color: #cdd6f4;
+  font-size: 16px;
+  font-family: Nunito;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+#input {
+  background-color: #313244;
+  border: none;
+  margin: 10px 7px 0 7px;
+  border-radius: 10px;
+  color: #cdd6f4;
+}
+
+#scroll {
+  margin: 5px;
+}
+
+#entry {
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+.entry {
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#entry #selected {
+  background-color: #eba0ac;
+}
+
+
+#input * {
+  color: #cdd6f4;
+}
+
+#img {
+  margin-right: 10px;
+}

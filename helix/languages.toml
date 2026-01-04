@@ -9,6 +9,7 @@ formatter = { command = "jlfmt", args = ["--style=sciml"]  }
 
 [[language]]
 name = "go"
+auto-format = true
 formatter = { command = "goimports" }
 
 [[language]]

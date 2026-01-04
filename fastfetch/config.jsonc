@@ -19,17 +19,13 @@
       "format": "{user-name}"
     },
     {
-      "key": "│{#34}   distro     {#keys}│",
+      "key": "│{#32}   distro     {#keys}│",
       "type": "os",
       "format": "{name}"
     },
     {
-      "type": "de",
-      "key": "│{#36} 󰇄  dekstop    {#keys}│"
-    },
-    {
       "type": "shell",
-      "key": "│{#31}   shell      {#keys}│",
+      "key": "│{#33}   shell      {#keys}│",
       "format": "{pretty-name}"
     },
     {
@@ -39,11 +35,11 @@
     },
     {
       "type": "packages",
-      "key": "│{#36}   packages   {#keys}│"
+      "key": "│{#35}   packages   {#keys}│"
     },
     {
       "type": "terminalfont",
-      "key": "│{#31}   font       {#keys}│"
+      "key": "│{#36}   font       {#keys}│"
     },
     {
       "key": "├── ⋅ ⋅  ⋅ ⋅ ──┤",
@@ -56,11 +52,11 @@
     },
     {
       "type": "gpu",
-      "key": "│{#34}   GPU        {#keys}│",
+      "key": "│{#32}   GPU        {#keys}│",
       "format": "{name}"
     },
     {
-      "key": "│{#36} 󰍛  memory     {#keys}│",
+      "key": "│{#33} 󰍛  memory     {#keys}│",
       "type": "memory"
     },
     {

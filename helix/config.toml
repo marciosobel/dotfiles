@@ -1,8 +1,7 @@
-theme = "ferra"
+theme = "catppuccin_mocha"
 
 [editor]
 line-number = "relative"
-rulers = [80, 120]
 end-of-line-diagnostics = "hint"
 bufferline = "multiple"
 cursorline = false
