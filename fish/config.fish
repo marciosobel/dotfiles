@@ -58,3 +58,6 @@ alias pacc='pacman -Scc' # Clean cache
 alias paclf='pacman -Ql' # List files
 alias yayi='yay -S --needed' # Install
 alias yayr='yay -R' # Remove
+
+alias z='zellij'
+alias za='zellij attach'

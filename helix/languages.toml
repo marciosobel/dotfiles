@@ -22,7 +22,7 @@ language-servers = ["typescript-language-server", "eslint"]
 name = "tsx"
 auto-format = true
 formatter = { command = "prettierd", args = ["--stdin-filepath", "%{buffer_name}"] }
-language-servers = ["typescript-language-server", "eslint"]
+language-servers = ["typescript-language-server", "eslint", "tailwindcss-ls"]
 
 [[language]]
 name = "rust"

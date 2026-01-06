@@ -4,58 +4,57 @@
   "fixed-center": true,
   "reload_style_on_change": true,
   "spacing": 10,
-
   "modules-left": [
     "custom/icon",
     "hyprland/workspaces"
   ],
-  "modules-center": ["clock"],
+  "modules-center": [
+    "clock"
+  ],
   "modules-right": [
     "tray",
+    "mpris",
     "hyprland/language",
     "privacy",
     "network",
     "image"
   ],
-
   "custom/icon": {
     "format": " "
   },
-
   "tray": {
     "spacing": 10
   },
-
   "image": {
     "path": "/home/marci/Pictures/mae.png",
     "size": 20
   },
-
   "privacy": {
     "icon-size": 14,
-    "modules": [ { "type": "screenshare" } ]
+    "modules": [
+      {
+        "type": "screenshare"
+      }
+    ]
   },
-
   "network": {
-   "format": " ",
-   "format-disconnected": " "
+    "format": " ",
+    "format-disconnected": " "
   },
-
   "hyprland/language": {
     "format-pt": "br",
     "format-en": "en"
   },
-
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "active": "●",
-      "default": "○", 
+      "active": "■",
+      "default": "□"
     }
   },
-
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%A %H:%M}",
+    "format-alt": "{:%H:%M}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode-mon-col": 3,
@@ -66,10 +65,20 @@
         "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
       }
     },
-    "actions":  {
+    "actions": {
       "on-click-right": "mode",
       "on-scroll-up": "shift_up",
       "on-scroll-down": "shift_down"
+    }
+  },
+  "mpris": {
+    "format": "{status_icon} {title}",
+    "format-paused": "{status_icon} {title}",
+    "interval": 1,
+    "status-icons": {
+      "playing": " ",
+      "paused": " ",
+      "stopped": " "
     }
   }
 }
