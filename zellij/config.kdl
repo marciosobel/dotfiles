@@ -304,6 +304,7 @@ theme "catppuccin-mocha"
 // Default: "default"
 // 
 // default_layout "compact"
+default_layout "no-status"
  
 // The folder in which Zellij will look for layouts
 // (Requires restart)
