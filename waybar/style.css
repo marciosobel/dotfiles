@@ -30,3 +30,29 @@ window#waybar {
 #workspaces button.active {
   opacity: 1;
 }
+
+#backlight-slider slider {
+  min-height: 0;
+  min-width: 0;
+  opacity: 0;
+  background-image: none;
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+#backlight-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  background: #45475a;
+  border: 0;
+  border-radius: 0;
+}
+
+#backlight-slider highlight {
+  min-height: 10px;
+  min-width: 10px;
+  border-radius: 0;
+  background: #cdd6f4;
+  border: 0;
+}

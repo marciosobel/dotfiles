@@ -1,7 +1,7 @@
 [user]
     name = Márcio Sobel
     email = marciosobel@proton.me
-    signingkey = 841759AFAECB1EC4
+    signingkey = 9B810BFCF36C57A8
 
 [core]
     compression = 9

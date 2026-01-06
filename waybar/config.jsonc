@@ -14,11 +14,33 @@
   "modules-right": [
     "tray",
     "mpris",
-    "hyprland/language",
     "privacy",
+    "group/brightness",
     "network",
+    "bluetooth",
+    "battery",
     "image"
   ],
+  "bluetooth": {
+    "format": "{status} 󰂯",
+    "format-connected": "{device_alias} 󰂱",
+    "format-on": "󰂯",
+    "format-off": "󰂲"
+  },
+  "group/brightness": {
+    "orientation": "inherit",
+    "modules": [
+      "custom/sun",
+      "backlight/slider"
+    ],
+    "drawer": {
+      "transition-left-to-right": false
+    }
+  },
+  "custom/sun": {
+    "format": "",
+    "tooltip": false
+  },
   "custom/icon": {
     "format": ""
   },
@@ -28,6 +50,27 @@
   "image": {
     "path": "/home/marci/Pictures/mae.png",
     "size": 20
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "max-length": 25
   },
   "privacy": {
     "icon-size": 14,
@@ -40,10 +83,6 @@
   "network": {
     "format": "",
     "format-disconnected": ""
-  },
-  "hyprland/language": {
-    "format-pt": "br",
-    "format-en": "en"
   },
   "hyprland/workspaces": {
     "format": "{icon}",
