@@ -3,7 +3,7 @@ theme = "catppuccin_mocha"
 [editor]
 line-number = "relative"
 end-of-line-diagnostics = "hint"
-# bufferline = "multiple"
+bufferline = "multiple"
 cursorline = false
 popup-border = "all"
 scrolloff = 8
