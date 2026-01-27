@@ -11,14 +11,19 @@ if [ ! -d "$DOTFILES_DIR" ]; then
   git clone "$REPO_URL" "$DOTFILES_DIR"
 fi
 
-cd "$DOTFILES_DIR" || exit
+cd "$DOTFILES_DIR" || {
+  echo "Failed to enter $DOTFILES_DIR"
+  exit 1
+}
+
+mkdir -p "$CONFIG_DIR"
 
 for dir in */; do
   app="${dir%/}" # Remove trailing slash
 
-  if [ "$app" == ".git" ]; then
-    continue
-  fi
+  case "$app" in
+    .git|screenshots) continue;;
+  esac
 
   # Backup existing config if it's a real folder/file (not a link)
   if [ -e "$CONFIG_DIR/$app" ] && [ ! -L "$CONFIG_DIR/$app" ]; then
