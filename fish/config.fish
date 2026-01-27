@@ -56,6 +56,8 @@ alias paclo='pacman -Qdt' # List orphans
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # Remove orphans
 alias pacc='pacman -Scc' # Clean cache
 alias paclf='pacman -Ql' # List files
+alias pacu='sudo pacman -Syu' # System update
+
 alias yayi='yay -S --needed' # Install
 alias yayr='yay -R' # Remove
 
