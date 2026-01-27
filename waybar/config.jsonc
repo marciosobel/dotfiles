@@ -20,7 +20,7 @@
     "image"
   ],
   "custom/icon": {
-    "format": " "
+    "format": ""
   },
   "tray": {
     "spacing": 10
@@ -38,8 +38,8 @@
     ]
   },
   "network": {
-    "format": " ",
-    "format-disconnected": " "
+    "format": "",
+    "format-disconnected": ""
   },
   "hyprland/language": {
     "format-pt": "br",
@@ -76,9 +76,9 @@
     "format-paused": "{status_icon} {title}",
     "interval": 1,
     "status-icons": {
-      "playing": " ",
-      "paused": " ",
-      "stopped": " "
+      "playing": "",
+      "paused": "",
+      "stopped": ""
     }
   }
 }

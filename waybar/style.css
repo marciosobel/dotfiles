@@ -1,5 +1,5 @@
 window#waybar {
-  font-family: Nunito, Symbols-Only;
+  font-family: Nunito, 'JetBrainsMono Nerd Font Propo';
   background-color: #1e1e2e;
   color: #cdd6f4;
 }
@@ -19,12 +19,12 @@ window#waybar {
 }
 
 #workspaces button {
-    all: unset;
-    padding: 0px 5px;
-    margin-bottom: 2px;
-    font-size: 12px;
-    transition: all .1s ease;
-    opacity: 0.5;
+  all: unset;
+  padding: 0px 5px;
+  margin-bottom: 2px;
+  font-size: 12px;
+  transition: all .1s ease;
+  opacity: 0.5;
 }
 
 #workspaces button.active {
