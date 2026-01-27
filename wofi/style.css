@@ -1,6 +1,6 @@
 window {
-  background-color: #181825;
-  color: #cdd6f4;
+  background-color: #343f44;
+  color: #d3c6aa;
   font-size: 16px;
   font-family: Nunito;
   font-weight: 600;
@@ -8,11 +8,11 @@ window {
 }
 
 #input {
-  background-color: #313244;
+  background-color: #232a2e;
   border: none;
   margin: 10px 7px 0 7px;
   border-radius: 10px;
-  color: #cdd6f4;
+  color: #d3c6aa;
 }
 
 #scroll {
@@ -30,12 +30,12 @@ window {
 }
 
 #entry #selected {
-  background-color: #eba0ac;
+  background-color: #4F585E;
 }
 
 
 #input * {
-  color: #cdd6f4;
+  color: #d3c6aa;
 }
 
 #img {
