@@ -284,7 +284,7 @@ simplified_ui true
 // Default: default
 // 
 // theme "dracula"
-theme "everforest-dark"
+theme "gruvbox-dark"
  
 // Choose the base input mode of zellij.
 // Default: normal

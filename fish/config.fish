@@ -23,10 +23,12 @@ set -gx PATH "$HOME/.config/fish/scripts" $PATH
 
 # env
 set -gx EDITOR helix
+set -gx CARGO_TARGET_DIR "$HOME/.cargo/shared_target"
 
 # aliases
 alias vim=nvim
 alias hx=helix
+alias zed=zeditor
 
 alias l='lsd -1A --group-directories-first --color=always'
 alias ls='lsd'
@@ -42,6 +44,11 @@ alias gc!='git commit --amend'
 alias gc!!='git commit --amend --no-edit'
 alias gp='git push'
 alias gp!='git push --force'
+alias grb='git rebase'
+alias grbi='git rebase -i'
+alias gb='git branch'
+alias gsb='git switch'
+alias gr='git restore'
 
 alias clock='tty-clock -ct -C 5'
 
@@ -54,7 +61,7 @@ alias pacr='sudo pacman -Rs' # Remove
 alias pacs='pacman -Ss' # Search
 alias paclo='pacman -Qdt' # List orphans
 alias pacro='sudo pacman -Rns $(pacman -Qtdq)' # Remove orphans
-alias pacc='pacman -Scc' # Clean cache
+alias pacc='sudo pacman -Scc' # Clean cache
 alias paclf='pacman -Ql' # List files
 alias pacu='sudo pacman -Syu' # System update
 
@@ -63,3 +70,5 @@ alias yayr='yay -R' # Remove
 
 alias z='zellij'
 alias za='zellij attach'
+
+alias ollama='docker exec -it ollama ollama'
