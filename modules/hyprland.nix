@@ -47,6 +47,8 @@
         "$mod, mouse:273, resizewindow"
       ];
 
+      exec-once = [ "waybar" ];
+
       input = {
         kb_layout = "br";
         follow_mouse = 2;
