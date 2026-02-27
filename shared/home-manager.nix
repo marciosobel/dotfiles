@@ -6,5 +6,6 @@
     ../modules/kitty.nix
     ../modules/nixcord.nix
     ../modules/swww.nix
+    ../modules/waybar.nix
   ];
 }
