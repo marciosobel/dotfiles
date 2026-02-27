@@ -16,16 +16,16 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, zen-browser, ... }: {
-    nixosConfigurations.marci = nixpkgs.lib.nixosSystem {
+  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       modules = [
-        ./configuration.nix
+        ./laptop/configuration.nix
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.marci = import ./home.nix;
-          home-manager.sharedModules = [ zen-browser.homeModules.beta ];
+          home-manager.users.marci = import ./laptop/home.nix;
+          home-manager.sharedModules = [ inputs.zen-browser.homeModules.beta ];
         }
       ];
     };

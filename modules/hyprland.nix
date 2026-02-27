@@ -1,29 +1,4 @@
-{ pkgs, ... }: {
-  home.username = "marci";
-  home.homeDirectory = "/home/marci";
-
-  home.packages = with pkgs; [
-    kitty
-    fastfetch
-  ];
-
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "Márcio Sobel";
-        email = "marciosobel@proton.me";
-        signingKey = "E7F2E29E35A796E7";
-      };
-      commit.gpgSign = true;
-    };
-  };
-
-  programs.zen-browser = {
-    enable = true;
-    suppressXdgMigrationWarning = true;
-  };
-
+{
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {
@@ -104,14 +79,9 @@
       };
 
       animations.enabled = "no, thanks :3";
-
-      monitor = [ "eDP-1, 1920x1080@60, 0x0, 1" ];
       gesture = "3, horizontal, workspace";
     };
   };
 
-  programs.wofi.enable = true;
   services.hyprpolkitagent.enable = true;
-
-  home.stateVersion = "25.11";
 }
