@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ];
+  imports = [ ./hardware-configuration.nix ../shared/nixos.nix ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -35,10 +35,8 @@
   };
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "br";
-    variant = "";
-  };
+  services.xserver.xkb.layout = "br";
+  services.pipewire.enable = true;
 
   # Configure console keymap
   console.keyMap = "br-abnt2";
@@ -61,6 +59,8 @@
 
   programs.hyprland.enable = true;
   programs.gnupg.agent.enable = true;
+
+  security.polkit.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

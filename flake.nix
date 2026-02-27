@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixcord.url = "github:FlameFlag/nixcord";
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -25,7 +26,10 @@
           home-manager.useUserPackages = true;
 
           home-manager.users.marci = import ./laptop/home.nix;
-          home-manager.sharedModules = [ inputs.zen-browser.homeModules.beta ];
+          home-manager.sharedModules = [
+             inputs.zen-browser.homeModules.beta
+             inputs.nixcord.homeModules.nixcord
+          ];
         }
       ];
     };
