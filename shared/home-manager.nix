@@ -5,5 +5,6 @@
     ../modules/zen-browser.nix
     ../modules/kitty.nix
     ../modules/nixcord.nix
+    ../modules/swww.nix
   ];
 }
