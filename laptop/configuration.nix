@@ -1,5 +1,5 @@
 { config, pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ../shared/nixos.nix ];
+  imports = [ ./hardware-configuration.nix ../modules/nixos.nix ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;

@@ -153,6 +153,10 @@
         background: #cdd6f4;
         border: 0;
       }
+
+      #battery .charging {
+        color: #98971a;
+      }
     '';
   };
 }

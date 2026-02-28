@@ -2,19 +2,25 @@
   home.username = "marci";
   home.homeDirectory = "/home/marci";
 
-  imports = [ ../shared/home-manager.nix ];
+  imports = [ ../modules/home-manager.nix ];
 
   home.packages = with pkgs; [
+    # essential apps and services
     brightnessctl
     kitty
-    fastfetch
 
+    # GUI
     krita
     obsidian
     mpv
+
+    # TUI
     yazi
     dragon-drop
     lazygit
+
+    # :3
+    fastfetch
   ];
 
   wayland.windowManager.hyprland.settings.monitor = [ "eDP-1, 1920x1080@60, 0x0, 1" ];
