@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.waybar = {
     enable = true;
     settings = {
@@ -10,8 +10,8 @@
         spacing = 5;
 
         # modules position
-        modules-left = [ "custom/icon" "hyprland/workspaces" ];
-        modules-center = [ "clock" ];
+        modules-left = ["custom/icon" "hyprland/workspaces"];
+        modules-center = ["clock"];
         modules-right = [
           "tray"
           "mpris"
@@ -28,7 +28,7 @@
         tray.spacing = 10;
         privacy = {
           icon-size = 14;
-          modules = [ { type = "screenshare"; } ];
+          modules = [{type = "screenshare";}];
         };
         "hyprland/language" = {
           format-pt = "br";
@@ -48,7 +48,7 @@
             critical = 15;
           };
           format = "{capacity}%  {icon}";
-          format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+          format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
           max-length = 25;
         };
         network = {
@@ -82,12 +82,12 @@
           format-disabled = "󰂲";
         };
         "custom/sun" = {
-          format =  "";
+          format = "";
           tooltip = false;
         };
         "group/brightness" = {
           "orientation" = "inherit";
-          modules = [ "custom/sun" "backlight/slider" ];
+          modules = ["custom/sun" "backlight/slider"];
           drawer = {
             transition-left-to-right = false;
           };
@@ -99,7 +99,7 @@
       * {
         font-family: Nunito, 'JetBrainsMono Nerd Font Propo';
       }
-      
+
       window#waybar {
         background-color: @base00;
         color: @base05;

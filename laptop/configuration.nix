@@ -1,11 +1,15 @@
-{ config, pkgs, ... }: {
-  imports = [ ./hardware-configuration.nix ../modules/nixos.nix ];
+{
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [./hardware-configuration.nix ../modules/nixos.nix];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   networking.hostName = "nixos";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -46,7 +50,7 @@
   users.users.marci = {
     isNormalUser = true;
     description = "marci";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [];
   };
 

@@ -21,19 +21,25 @@
     };
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }@inputs: {
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
       modules = [
         ./laptop/configuration.nix
-        home-manager.nixosModules.home-manager {
+        home-manager.nixosModules.home-manager
+        {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
           home-manager.users.marci = import ./laptop/home.nix;
           home-manager.sharedModules = [
-             inputs.zen-browser.homeModules.beta
-             inputs.nixcord.homeModules.nixcord
-             inputs.stylix.homeModules.stylix
+            inputs.zen-browser.homeModules.beta
+            inputs.nixcord.homeModules.nixcord
+            inputs.stylix.homeModules.stylix
           ];
         }
       ];

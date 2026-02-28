@@ -1,5 +1,5 @@
 {
-  imports = [    
+  imports = [
     ./home-manager/hyprland.nix
     ./home-manager/git.nix
     ./home-manager/zen-browser.nix

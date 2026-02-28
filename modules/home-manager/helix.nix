@@ -1,9 +1,9 @@
-{ pkgs, ... }: {
+{pkgs, ...}: {
   programs.helix = {
     enable = true;
     settings = {
       editor = {
-        line-number = "relative";  
+        line-number = "relative";
         end-of-line-diagnostics = "hint";
         bufferline = "multiple";
         cursorline = false;
@@ -36,13 +36,16 @@
     };
 
     languages.language-server = {
-      eslint = { command = "eslint-lsp"; args = [ "--stdio" ] };
+      eslint = {
+        command = "eslint-lsp";
+        args = ["--stdio"];
+      };
     };
     languages.language = [
       {
         name = "nix";
         auto-format = true;
-        formatter.command = "alejandra"
+        formatter.command = "alejandra";
       }
     ];
   };
