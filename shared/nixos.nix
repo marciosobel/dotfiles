@@ -1,3 +1,6 @@
 {
-  imports = [ ../modules/fonts.nix ];
+  imports = [
+     ../modules/fonts.nix
+     ../modules/steam.nix
+  ];
 }

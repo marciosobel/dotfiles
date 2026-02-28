@@ -5,6 +5,7 @@
   imports = [ ../shared/home-manager.nix ];
 
   home.packages = with pkgs; [
+    brightnessctl
     kitty
     fastfetch
   ];
