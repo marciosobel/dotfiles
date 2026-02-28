@@ -1,4 +1,6 @@
-{
+{ pkgs, ... }: {
+  home.packages = [ pkgs.git-credential-manager ];
+
   programs.git = {
     enable = true;
     settings = {
@@ -7,6 +9,8 @@
         email = "marciosobel@proton.me";
       };
       commit.gpgSign = true;
+      credential.helper = "manager";
+      credential.credentialStore = "secretservice";
     };
   };
 }

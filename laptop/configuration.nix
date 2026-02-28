@@ -37,6 +37,7 @@
   # Configure keymap in X11
   services.xserver.xkb.layout = "br";
   services.pipewire.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # Configure console keymap
   console.keyMap = "br-abnt2";
