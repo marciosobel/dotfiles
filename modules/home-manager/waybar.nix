@@ -7,7 +7,7 @@
         position = "top";
         height = 30;
         fixed-center = true;
-        spacing = 10;
+        spacing = 5;
 
         # modules position
         modules-left = [ "custom/icon" "hyprland/workspaces" ];
@@ -47,7 +47,7 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}% {icon}";
+          format = "{capacity}%  {icon}";
           format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           max-length = 25;
         };
@@ -79,6 +79,7 @@
           format-connected = "{device_alias} 󰂱";
           format-on = "󰂯";
           format-off = "󰂲";
+          format-disabled = "󰂲";
         };
         "custom/sun" = {
           format =  "";
@@ -95,10 +96,13 @@
     };
 
     style = ''
-      window#waybar {
+      * {
         font-family: Nunito, 'JetBrainsMono Nerd Font Propo';
-        background-color: #2d353b;
-        color: #d3c6aa;
+      }
+      
+      window#waybar {
+        background-color: @base00;
+        color: @base05;
       }
 
       .modules-left,
@@ -113,6 +117,10 @@
 
       .modules-right {
         padding-right: 10px;
+      }
+
+      #workspaces {
+        margin-left: 5px;
       }
 
       #workspaces button {
@@ -141,7 +149,7 @@
       #backlight-slider trough {
         min-height: 10px;
         min-width: 80px;
-        background: #45475a;
+        background: @base01;
         border: 0;
         border-radius: 0;
       }
@@ -150,12 +158,12 @@
         min-height: 10px;
         min-width: 10px;
         border-radius: 0;
-        background: #cdd6f4;
+        background: @base05;
         border: 0;
       }
 
       #battery .charging {
-        color: #98971a;
+        color: @base0B;
       }
     '';
   };
