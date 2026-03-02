@@ -1,4 +1,6 @@
-{
+{pkgs, ...}: {
+  programs.fish.enable = true;
+
   programs.kitty = {
     enable = true;
     settings = {
@@ -15,6 +17,7 @@
       resize_in_steps = true;
 
       background_opacity = "0.8";
+      shell = "${pkgs.fish}/bin/fish";
     };
 
     font = {

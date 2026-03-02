@@ -9,5 +9,6 @@
     ./home-manager/waybar.nix
     ./home-manager/stylix.nix
     ./home-manager/helix.nix
+    ./home-manager/fish.nix
   ];
 }
