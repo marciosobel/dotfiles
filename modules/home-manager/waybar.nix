@@ -7,7 +7,7 @@
         position = "top";
         height = 30;
         fixed-center = true;
-        spacing = 5;
+        spacing = 10;
 
         # modules position
         modules-left = ["custom/icon" "hyprland/workspaces"];
