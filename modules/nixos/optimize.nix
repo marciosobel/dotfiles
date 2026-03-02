@@ -1,5 +1,5 @@
 {
-  nix.settings.auto-optimize-store = true;
+  nix.settings.auto-optimise-store = true;
   nix.gc = {
     automatic = true;
     dates = "15d";
