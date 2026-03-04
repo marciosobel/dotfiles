@@ -11,12 +11,11 @@
 
     # GUI
     krita
-    obsidian
+    dragon-drop
     mpv
 
     # TUI
     yazi
-    dragon-drop
     lazygit
 
     # :3

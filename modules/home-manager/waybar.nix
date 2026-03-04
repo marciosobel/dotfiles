@@ -88,9 +88,7 @@
         "group/brightness" = {
           "orientation" = "inherit";
           modules = ["custom/sun" "backlight/slider"];
-          drawer = {
-            transition-left-to-right = false;
-          };
+          drawer.transition-left-to-right = false;
         };
       };
     };
