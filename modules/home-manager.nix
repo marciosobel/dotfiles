@@ -10,5 +10,6 @@
     ./home-manager/stylix.nix
     ./home-manager/helix.nix
     ./home-manager/fish.nix
+    ./home-manager/obsidian.nix
   ];
 }
