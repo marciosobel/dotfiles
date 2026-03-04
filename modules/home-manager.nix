@@ -11,5 +11,6 @@
     ./home-manager/helix.nix
     ./home-manager/fish.nix
     ./home-manager/obsidian.nix
+    ./home-manager/zed.nix
   ];
 }
