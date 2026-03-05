@@ -1,8 +1,4 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [./hardware-configuration.nix ../modules/nixos.nix];
 
   # Bootloader.
@@ -51,7 +47,7 @@
     isNormalUser = true;
     description = "marci";
     extraGroups = ["networkmanager" "wheel"];
-    packages = with pkgs; [];
+    packages = [];
   };
 
   # Allow unfree packages
