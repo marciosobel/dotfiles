@@ -13,6 +13,8 @@
     krita
     dragon-drop
     mpv
+    ente-auth
+    heroic
 
     # TUI
     yazi
