@@ -7,6 +7,7 @@
   home.packages = with pkgs; [
     # essential apps and services
     brightnessctl
+    grimblast
     kitty
 
     # GUI
