@@ -14,5 +14,6 @@
     ./home-manager/zed.nix
     ./home-manager/zellij.nix
     ./home-manager/wofi.nix
+    ./home-manager/fastfetch.nix
   ];
 }
