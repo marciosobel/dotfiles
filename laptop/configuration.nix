@@ -34,10 +34,22 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "br";
+  services.xserver.xkb.layout = "br"; # Configure keymap in X11
   services.pipewire.enable = true;
   services.gnome.gnome-keyring.enable = true;
+  services.auto-cpufreq = {
+    enable = true;
+    settings = {
+      battery = {
+        governor = "powersave";
+        turbo = "never";
+      };
+      charger = {
+        gorvernor = "performance";
+        turbo = "auto";
+      };
+    };
+  };
 
   # Configure console keymap
   console.keyMap = "br-abnt2";
