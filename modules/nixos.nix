@@ -5,5 +5,6 @@
     ./nixos/opentabletdriver.nix
     ./nixos/kernel.nix
     ./nixos/optimize.nix
+    ./nixos/docker.nix
   ];
 }

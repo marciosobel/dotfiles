@@ -58,7 +58,7 @@
   users.users.marci = {
     isNormalUser = true;
     description = "marci";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     packages = [];
   };
 
