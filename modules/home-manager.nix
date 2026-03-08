@@ -13,5 +13,6 @@
     ./home-manager/obsidian.nix
     ./home-manager/zed.nix
     ./home-manager/zellij.nix
+    ./home-manager/wofi.nix
   ];
 }

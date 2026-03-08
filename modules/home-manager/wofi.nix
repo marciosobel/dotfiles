@@ -1,0 +1,38 @@
+{
+  programs.wofi = {
+    enable = true;
+    settings = {
+      width = 800;
+      allow_images = true;
+      image_size = 40;
+      term = "kitty";
+      insensitive = true;
+      location = "center";
+      normal_window = false;
+      prompt = "Search";
+      lines = 10;
+      hide_scroll = true;
+      no_actions = true;
+    };
+
+    style = ''
+      #input {
+        margin: 10px;
+        border-radius: 0;
+      }
+
+      #scroll {
+        margin: 0 10px;
+      }
+
+      #entry {
+        outline: none;
+        padding: 5px;
+      }
+
+      #img {
+        margin-right: 10px;
+      }
+    '';
+  };
+}
