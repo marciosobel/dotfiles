@@ -2,6 +2,8 @@
 welcome to my [NixOS](https://nixos.org/) dots! here you'll find both configuration files for my personal computer and my laptop, alongside their
 configuration using [home-manager](https://nix-community.github.io/home-manager/).
 
+i made this config aiming to have a simple, minimalist environment that helps me focus while having a pleasant visual that makes everything feels connected.
+
 currently, the only way to run this flake is with the `#laptop` variant. i'm planning on adding a `#desktop` variant soon™, as well as a way to run only the
 shared modules (and not the system configuration).
 
