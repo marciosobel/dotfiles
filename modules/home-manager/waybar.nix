@@ -163,6 +163,10 @@
       #battery .charging {
         color: @base0B;
       }
+
+      #tray * {
+        border-radius: 0;
+      }
     '';
   };
 }
