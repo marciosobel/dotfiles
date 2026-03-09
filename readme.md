@@ -8,11 +8,11 @@ currently, the only way to run this flake is with the `#laptop` variant. i'm pla
 shared modules (and not the system configuration).
 
 speaking of which, the configuration for each app can be found in the [`modules`](./modules) folder. the modules are split in 4 pieces:
-- `home-manager.nix`: shared `home-manager` modules between all variants.
-- `nixos.nix`: shared `configuration.nix` modules between all variants.
-- `home-manager/`: configuration for each app that is installed and/or configured by the user. if you want to change some setting, it's probably there.
+- [`home-manager.nix`](./modules/home-manager.nix): shared `home-manager` modules between all variants.
+- [`nixos.nix`](./modules/nixos.nix): shared `configuration.nix` modules between all variants.
+- [`home-manager/`](./modules/home-manager): configuration for each app that is installed and/or configured by the user. if you want to change some setting, it's probably there.
 modules should be imported in the `home.nix` file.
-- `nixos/`: configuration for system-level apps, such as daemons, services, universal packages, etc. modules should be imported in the `configuration.nix` file.
+- [`nixos/`](./modules/nixos): configuration for system-level apps, such as daemons, services, universal packages, etc. modules should be imported in the `configuration.nix` file.
 
 while i don't make this flake configurable (as you being able to use specific modules, e.g. the `waybar` config), keep in mind that it is
 made specifically *for my needs*.
