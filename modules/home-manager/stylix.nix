@@ -27,6 +27,7 @@
         opacity.enable = false;
         fonts.enable = false;
       };
+      cava.rainbow.enable = true;
     };
   };
 }
