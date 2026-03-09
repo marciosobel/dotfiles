@@ -21,9 +21,6 @@
     yazi
     lazygit
 
-    # :3
-    fastfetch
-
     # rust alternatives to unix commands
     lsd
     bat

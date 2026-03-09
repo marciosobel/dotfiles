@@ -42,7 +42,7 @@
         }
         {
           type = "os";
-          key = "│{#32}   distro     {#keys}│";
+          key = "│{#32}   distro     {#keys}│";
           format = "{name}";
         }
         {
