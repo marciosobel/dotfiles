@@ -1,5 +1,9 @@
 {pkgs, ...}: {
-  imports = [./hardware-configuration.nix ../modules/nixos.nix];
+  imports = [
+    ./hardware-configuration.nix
+    ../modules/nixos.nix
+    ../modules/nixos/auto-cpufreq.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -37,19 +41,6 @@
   services.xserver.xkb.layout = "br"; # Configure keymap in X11
   services.pipewire.enable = true;
   services.gnome.gnome-keyring.enable = true;
-  services.auto-cpufreq = {
-    enable = true;
-    settings = {
-      battery = {
-        governor = "powersave";
-        turbo = "never";
-      };
-      charger = {
-        gorvernor = "performance";
-        turbo = "auto";
-      };
-    };
-  };
 
   # Configure console keymap
   console.keyMap = "br-abnt2";
