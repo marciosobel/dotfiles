@@ -15,5 +15,6 @@
     ./home-manager/zellij.nix
     ./home-manager/wofi.nix
     ./home-manager/fastfetch.nix
+    ./home-manager/dunst.nix
   ];
 }
