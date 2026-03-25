@@ -9,6 +9,7 @@
     brightnessctl
     grimblast
     kitty
+    adwaita-icon-theme # for GTK apps
 
     # GUI
     krita
@@ -16,6 +17,7 @@
     mpv
     ente-auth
     heroic
+    nautilus
 
     # TUI
     yazi
