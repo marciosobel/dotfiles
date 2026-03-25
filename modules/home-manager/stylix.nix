@@ -29,6 +29,7 @@
         opacity.enable = false;
         fonts.enable = false;
       };
+      wofi.fonts.override.monospace.name = "Nunito";
       cava.rainbow.enable = true;
     };
   };
