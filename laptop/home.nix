@@ -10,6 +10,7 @@
     grimblast
     kitty
     adwaita-icon-theme # for GTK apps
+    playerctl
 
     # GUI
     dragon-drop

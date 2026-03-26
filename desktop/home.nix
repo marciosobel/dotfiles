@@ -6,10 +6,10 @@
 
   home.packages = with pkgs; [
     # essential apps and services
-    brightnessctl
+    adwaita-icon-theme # for GTK apps
     grimblast
     kitty
-    adwaita-icon-theme # for GTK apps
+    playerctl
 
     # GUI
     krita
