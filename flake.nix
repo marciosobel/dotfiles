@@ -44,5 +44,23 @@
         }
       ];
     };
+
+    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+      modules = [
+        ./desktop/configuration.nix
+        home-manager.nixosModules.home-manager
+        {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users.marci = import ./desktop/home.nix;
+          home-manager.sharedModules = [
+            inputs.zen-browser.homeModules.beta
+            inputs.nixcord.homeModules.nixcord
+            inputs.stylix.homeModules.stylix
+          ];
+        }
+      ];
+    };
   };
 }

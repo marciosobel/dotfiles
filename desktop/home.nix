@@ -12,9 +12,11 @@
     adwaita-icon-theme # for GTK apps
 
     # GUI
+    krita
     dragon-drop
     mpv
     ente-auth
+    heroic
     nautilus
 
     # TUI
@@ -30,11 +32,14 @@
 
   # Overrides
   wayland.windowManager.hyprland.settings = {
-    input.kb_layout = "br";
-    monitor = ["eDP-1, 1920x1080@60, 0x0, 1"];
+    input.kb_layout = "us, br";
+    monitor = [
+      "HDMI-A-1, 2560x1440@100, 1920x-600, 1"
+      "DP-3, 1920x1080@165, 0x0, 1"
+    ];
   };
 
-  programs.git.settings.user.signingKey = "E7F2E29E35A796E7";
+  programs.git.settings.user.signingKey = "00A753037271B008";
 
   programs.waybar.settings.main = {
     modules-left = ["custom/icon" "hyprland/workspaces"];
@@ -44,10 +49,7 @@
       "mpris"
       "hyprland/language"
       "privacy"
-      "group/brightness"
       "network"
-      "bluetooth"
-      "battery"
     ];
   };
 

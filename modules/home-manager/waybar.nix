@@ -9,20 +9,6 @@
         fixed-center = true;
         spacing = 10;
 
-        # modules position
-        modules-left = ["custom/icon" "hyprland/workspaces"];
-        modules-center = ["clock"];
-        modules-right = [
-          "tray"
-          "mpris"
-          "hyprland/language"
-          "privacy"
-          "group/brightness"
-          "network"
-          "bluetooth"
-          "battery"
-        ];
-
         # modules
         "custom/icon".format = "";
         tray.spacing = 10;

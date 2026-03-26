@@ -5,10 +5,12 @@
       "$mod" = "SUPER";
       "$terminal" = "kitty";
       "$menu" = "wofi --show=drun";
+      "$file_explorer" = "nautilus";
 
       bind =
         [
           ", Print, exec, grimblast --freeze copy area"
+          "$mod, e, exec, $file_explorer"
 
           "$mod, q, exec, $terminal"
           "$mod, c, killactive"
@@ -57,7 +59,7 @@
       exec-once = ["waybar"];
 
       input = {
-        kb_layout = "br";
+        kb_options = "grp:win_space_toggle";
         follow_mouse = 2;
         accel_profile = "flat";
         sensitivity = 0;
