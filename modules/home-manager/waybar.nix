@@ -116,7 +116,7 @@
 
       #workspaces button {
         all: unset;
-        padding: 0px 5px;
+        padding-right: 10px;
         margin-bottom: 2px;
         font-size: 12px;
         transition: all .1s ease;

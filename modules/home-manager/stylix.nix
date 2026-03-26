@@ -1,5 +1,5 @@
 {pkgs, ...}: {
-  stylix = {
+  stylix = rec {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
     polarity = "dark";
@@ -22,7 +22,8 @@
     };
     targets = {
       waybar = {
-        fonts.enable = false;
+        font = "sansSerif";
+        fonts.override.sansSerif.name = "${fonts.sansSerif.name}, ${fonts.monospace.name}";
         addCss = false;
       };
       kitty = {
