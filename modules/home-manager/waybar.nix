@@ -76,14 +76,21 @@
           modules = ["custom/sun" "backlight/slider"];
           drawer.transition-left-to-right = false;
         };
+
+        mpris = {
+          format = "{status_icon} {title}";
+          format-paused = "{status_icon} {title}";
+          interval = 1;
+          status-icons = {
+            playing = "";
+            paused = "";
+            stopped = "";
+          };
+        };
       };
     };
 
     style = ''
-      * {
-        font-family: Nunito, 'JetBrainsMono Nerd Font Propo';
-      }
-
       window#waybar {
         background-color: @base00;
         color: @base05;
