@@ -43,7 +43,6 @@
     modules-right = [
       "tray"
       "mpris"
-      "hyprland/language"
       "privacy"
       "group/brightness"
       "network"
