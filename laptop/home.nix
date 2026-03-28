@@ -24,6 +24,4 @@
       "battery"
     ];
   };
-
-  home.stateVersion = "25.11";
 }
