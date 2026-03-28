@@ -42,6 +42,7 @@
     # TUI
     yazi
     lazygit
+    pass
 
     # rust alternatives to unix commands
     lsd

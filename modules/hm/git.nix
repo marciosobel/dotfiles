@@ -1,6 +1,5 @@
 {pkgs, ...}: {
   home.packages = [pkgs.git-credential-manager];
-  home.sessionVariables.GCM_CREDENTIAL_STORE = "secretservice";
 
   programs.git = {
     enable = true;
@@ -46,7 +45,7 @@
       tag.sort = "-taggerdate";
       init.defaultBranch = "dev";
       credential.helper = "manager";
-      credential.credentialStore = "secretservice";
+      credential.credentialStore = "gpg";
 
       color = {
         branch = {
