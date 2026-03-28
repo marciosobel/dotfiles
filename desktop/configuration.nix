@@ -61,6 +61,7 @@
   programs.gnupg.agent.enable = true;
 
   security.polkit.enable = true;
+  security.pam.services.login.enableGnomeKeyring = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

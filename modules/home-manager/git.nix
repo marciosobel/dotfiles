@@ -1,5 +1,6 @@
 {pkgs, ...}: {
   home.packages = [pkgs.git-credential-manager];
+  home.sessionVariables.GCM_CREDENTIAL_STORE = "secretservice";
 
   programs.git = {
     enable = true;
@@ -28,7 +29,7 @@
 
       log = {
         abbrevCommit = true;
-        grapthColors = "blue,yellow,cyan,magenta,green,red";
+        graphColors = "blue,yellow,cyan,magenta,green,red";
       };
 
       pager = {
