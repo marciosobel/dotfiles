@@ -12,11 +12,13 @@
     ../modules/nixos/docker.nix
   ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-
   nix.settings.experimental-features = ["nix-command" "flakes"];
+
+  # Bootloader.
+  boot.loader = {
+    systemd-boot.enable = true;
+    efi.canTouchEfiVariables = true;
+  };
 
   networking.hostName = "nixos";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -45,8 +47,10 @@
     LC_TIME = "pt_BR.UTF-8";
   };
 
-  services.pipewire.enable = true;
-  services.gnome.gnome-keyring.enable = true;
+  services = {
+    pipewire.enable = true;
+    gnome.gnome-keyring.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.${user} = {
@@ -64,11 +68,15 @@
     git
   ];
 
-  programs.hyprland.enable = true;
-  programs.gnupg.agent.enable = true;
+  programs = {
+    hyprland.enable = true;
+    gnupg.agent.enable = true;
+  };
 
-  security.polkit.enable = true;
-  security.pam.services.login.enableGnomeKeyring = true;
+  security = {
+    polkit.enable = true;
+    pam.services.login.enableGnomeKeyring = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
