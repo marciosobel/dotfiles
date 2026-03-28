@@ -32,6 +32,7 @@
       };
       wofi.fonts.override.monospace.name = "Nunito";
       cava.rainbow.enable = true;
+      obsidian.fonts.override.sizes.applications = 16;
     };
   };
 }
