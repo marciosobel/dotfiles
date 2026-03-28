@@ -27,8 +27,8 @@
         addCss = false;
       };
       kitty = {
-        opacity.enable = false;
-        fonts.enable = false;
+        opacity.override.terminal = 0.95;
+        fonts.override.monospace.name = "JetBrainsMono Nerd Font";
       };
       wofi.fonts.override.monospace.name = "Nunito";
       cava.rainbow.enable = true;

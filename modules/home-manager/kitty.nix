@@ -16,13 +16,7 @@
       remember_window_size = true;
       resize_in_steps = true;
 
-      background_opacity = "0.8";
       shell = "${pkgs.fish}/bin/fish";
-    };
-
-    font = {
-      name = "JetBrainsMono Nerd Font";
-      size = 12.0;
     };
   };
 }
