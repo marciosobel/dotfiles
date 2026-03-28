@@ -16,5 +16,6 @@
     ./home-manager/wofi.nix
     ./home-manager/fastfetch.nix
     ./home-manager/dunst.nix
+    ./home-manager/direnv.nix
   ];
 }

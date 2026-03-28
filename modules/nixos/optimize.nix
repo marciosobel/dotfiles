@@ -8,5 +8,4 @@
 
   zramSwap.enable = true;
   services.earlyoom.enable = true;
-  programs.direnv.enable = true;
 }
