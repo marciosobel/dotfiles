@@ -1,35 +1,9 @@
 {pkgs, ...}: {
-  home.username = "marci";
-  home.homeDirectory = "/home/marci";
-
-  imports = [../modules/home-manager.nix];
-
   home.packages = with pkgs; [
-    # essential apps and services
     brightnessctl
-    grimblast
-    kitty
-    adwaita-icon-theme # for GTK apps
-    playerctl
-
-    # GUI
-    dragon-drop
-    mpv
-    ente-auth
-    nautilus
-
-    # TUI
-    yazi
-    lazygit
-
-    # rust alternatives to unix commands
-    lsd
-    bat
-    fzf
-    ripgrep
   ];
 
-  # Overrides
+  # overrides
   wayland.windowManager.hyprland.settings = {
     input.kb_layout = "br";
     monitor = ["eDP-1, 1920x1080@60, 0x0, 1"];

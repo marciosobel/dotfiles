@@ -26,40 +26,39 @@
     nixpkgs,
     home-manager,
     ...
-  } @ inputs: {
+  } @ inputs: let
+    user = "marci"; # change if you are adapting this to your own config
+    mkHomeManagerModule = module: {
+      imports = [home-manager.nixosModules.home-manager];
+      home-manager = {
+        useGlobalPkgs = true;
+        useUserPackages = true;
+        users.${user} = import module;
+        extraSpecialArgs = {inherit user inputs;};
+        sharedModules = [
+          ./shared/home.nix
+          inputs.zen-browser.homeModules.beta
+          inputs.nixcord.homeModules.nixcord
+          inputs.stylix.homeModules.stylix
+        ];
+      };
+    };
+  in {
     nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit user;};
       modules = [
+        ./shared/configuration.nix
         ./laptop/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-
-          home-manager.users.marci = import ./laptop/home.nix;
-          home-manager.sharedModules = [
-            inputs.zen-browser.homeModules.beta
-            inputs.nixcord.homeModules.nixcord
-            inputs.stylix.homeModules.stylix
-          ];
-        }
+        (mkHomeManagerModule ./laptop/home.nix)
       ];
     };
 
     nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+      specialArgs = {inherit user;};
       modules = [
+        ./shared/configuration.nix
         ./desktop/configuration.nix
-        home-manager.nixosModules.home-manager
-        {
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
-
-          home-manager.users.marci = import ./desktop/home.nix;
-          home-manager.sharedModules = [
-            inputs.zen-browser.homeModules.beta
-            inputs.nixcord.homeModules.nixcord
-            inputs.stylix.homeModules.stylix
-          ];
-        }
+        (mkHomeManagerModule ./desktop/home.nix)
       ];
     };
   };
