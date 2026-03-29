@@ -33,7 +33,7 @@
       home-manager = {
         useGlobalPkgs = true;
         useUserPackages = true;
-        users.${user} = import module;
+        users.${user} = module;
         extraSpecialArgs = {inherit user inputs;};
         sharedModules = [
           ./shared/home.nix
@@ -49,7 +49,7 @@
       modules = [
         ./shared/configuration.nix
         ./laptop/configuration.nix
-        (mkHomeManagerModule ./laptop/home.nix)
+        (mkHomeManagerModule import ./laptop/home.nix)
       ];
     };
 
@@ -58,7 +58,7 @@
       modules = [
         ./shared/configuration.nix
         ./desktop/configuration.nix
-        (mkHomeManagerModule ./desktop/home.nix)
+        (mkHomeManagerModule import ./desktop/home.nix)
       ];
     };
   };
