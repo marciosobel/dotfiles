@@ -49,7 +49,7 @@
       modules = [
         ./shared/configuration.nix
         ./laptop/configuration.nix
-        (mkHomeManagerModule import ./laptop/home.nix)
+        (mkHomeManagerModule (import ./laptop/home.nix))
       ];
     };
 
@@ -58,7 +58,7 @@
       modules = [
         ./shared/configuration.nix
         ./desktop/configuration.nix
-        (mkHomeManagerModule import ./desktop/home.nix)
+        (mkHomeManagerModule (import ./desktop/home.nix))
       ];
     };
   };
