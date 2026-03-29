@@ -96,7 +96,7 @@ in {
           workspace = spaces.personal.id;
           position = 203;
         };
-        "Whatsapp Web" = {
+        "WhatsApp" = {
           id = "13f437da-1564-4ba4-99dc-dd96da61c6fc";
           url = "https://web.whatsapp.com/";
           workspace = spaces.personal.id;
