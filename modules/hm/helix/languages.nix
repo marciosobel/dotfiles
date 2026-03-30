@@ -24,6 +24,16 @@
       formatter.command = "alejandra";
     }
     {
+      name = "go";
+      auto-format = true;
+      formatter.command = "goimports";
+    }
+    {
+      name = "rust";
+      auto-format = true;
+      formatter.command = "rustfmt";
+    }
+    {
       name = "typescript";
       auto-format = true;
       language-servers = ["typescript-language-server" "eslint"];
