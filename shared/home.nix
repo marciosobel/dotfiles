@@ -38,6 +38,7 @@
     mpv
     ente-auth
     nautilus
+    tidal-hifi
 
     # TUI
     yazi
