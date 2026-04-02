@@ -23,6 +23,7 @@
 
       #scroll {
         margin: 0 10px;
+        margin-bottom: 10px;
       }
 
       #entry {
