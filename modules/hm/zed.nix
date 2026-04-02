@@ -10,6 +10,7 @@
       "make"
       "proto"
       "discord-presence"
+      "nix"
     ];
 
     userSettings = {
