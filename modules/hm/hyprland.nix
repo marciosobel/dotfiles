@@ -86,7 +86,15 @@
         };
       };
 
-      animations.enabled = "no, thanks :3";
+      animations.enabled = "yes, please :3";
+      animation = [
+        "workspaces, 1, 2, default"
+        "specialWorkspace, 1, 2, default, fade"
+        "windows, 1, 2, default, popin"
+        "border, 1, 2, default"
+        "fade, 1, 2, default"
+      ];
+
       gesture = "3, horizontal, workspace";
     };
   };
