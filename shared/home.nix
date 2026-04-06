@@ -39,11 +39,13 @@
     ente-auth
     nautilus
     tidal-hifi
+    zathura
 
     # TUI
     yazi
     lazygit
     pass
+    btop
 
     # rust alternatives to unix commands
     lsd
