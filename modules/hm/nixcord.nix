@@ -5,7 +5,6 @@
     vesktop.enable = true;
 
     config = {
-      frameless = true;
       plugins = {
         alwaysTrust.enable = true;
         anonymiseFileNames.enable = true;
