@@ -24,6 +24,7 @@
     ../modules/hm/fastfetch.nix
     ../modules/hm/dunst.nix
     ../modules/hm/direnv.nix
+    ../modules/hm/ghostty.nix
   ];
 
   home.packages = with pkgs; [
