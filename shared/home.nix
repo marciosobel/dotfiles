@@ -10,7 +10,6 @@
     ../modules/hm/hyprland.nix
     ../modules/hm/git.nix
     ../modules/hm/zen-browser.nix
-    ../modules/hm/kitty.nix
     ../modules/hm/nixcord.nix
     ../modules/hm/swww.nix
     ../modules/hm/waybar.nix

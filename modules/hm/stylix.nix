@@ -30,6 +30,10 @@
         opacity.override.terminal = 0.95;
         fonts.override.monospace.name = "JetBrainsMono Nerd Font";
       };
+      ghostty = {
+        opacity.override.terminal = 0.95;
+        fonts.override.monospace.name = "JetBrainsMono Nerd Font";
+      };
       wofi.fonts.override.monospace.name = "Nunito";
       cava.rainbow.enable = true;
       obsidian.fonts.override.sizes.applications = 16;

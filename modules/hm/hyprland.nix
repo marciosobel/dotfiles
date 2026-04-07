@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       "$mod" = "SUPER";
-      "$terminal" = "kitty";
+      "$terminal" = "ghostty";
       "$menu" = "wofi --show=drun";
       "$file_explorer" = "nautilus";
 
