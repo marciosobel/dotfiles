@@ -78,6 +78,18 @@
     pam.services.login.enableGnomeKeyring = true;
   };
 
+  xdg.portal = {
+    enable = true;
+    config = {
+      common.default = ["gtk"];
+      hyprland.default = ["hyprland" "gtk"];
+    };
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-hyprland
+    ];
+  };
+
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
