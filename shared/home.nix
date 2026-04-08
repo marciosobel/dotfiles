@@ -24,6 +24,7 @@
     ../modules/hm/dunst.nix
     ../modules/hm/direnv.nix
     ../modules/hm/ghostty.nix
+    ../modules/hm/btop.nix
   ];
 
   home.packages = with pkgs; [
@@ -45,7 +46,6 @@
     yazi
     lazygit
     pass
-    btop
 
     # rust alternatives to unix commands
     lsd
