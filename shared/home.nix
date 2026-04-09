@@ -31,7 +31,6 @@
     # essential apps and services
     grimblast
     kitty
-    adwaita-icon-theme # for GTK apps
     playerctl
 
     # GUI

@@ -3,6 +3,12 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
     polarity = "dark";
+    icons = {
+      enable = true;
+      package = pkgs.adwaita-icon-theme;
+      dark = "Adwaita-Dark";
+      light = "Adwaita-Light";
+    };
     cursor = {
       package = pkgs.google-cursor;
       name = "GoogleDot-Black";
@@ -31,12 +37,13 @@
         fonts.override.monospace.name = "JetBrainsMono Nerd Font";
       };
       ghostty = {
-        opacity.override.terminal = 0.95;
+        opacity.override.terminal = 0.85;
         fonts.override.monospace.name = "JetBrainsMono Nerd Font";
       };
       wofi.fonts.override.monospace.name = "Nunito";
       cava.rainbow.enable = true;
       obsidian.fonts.override.sizes.applications = 16;
+      helix.opacity.override.terminal = 0;
     };
   };
 }
