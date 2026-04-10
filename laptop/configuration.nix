@@ -1,8 +1,5 @@
 {
-  imports = [
-    ./hardware-configuration.nix
-    ../modules/nixos/auto-cpufreq.nix
-  ];
+  imports = [../modules/nixos/auto-cpufreq.nix];
 
   services.xserver.xkb.layout = "br"; # Configure keymap in X11
 

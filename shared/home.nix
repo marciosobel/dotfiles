@@ -11,7 +11,7 @@
     ../modules/hm/git.nix
     ../modules/hm/zen-browser.nix
     ../modules/hm/nixcord.nix
-    ../modules/hm/swww.nix
+    ../modules/hm/awww.nix
     ../modules/hm/waybar.nix
     ../modules/hm/stylix.nix
     ../modules/hm/helix
