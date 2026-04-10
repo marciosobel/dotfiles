@@ -10,9 +10,9 @@
       light = "Adwaita-Light";
     };
     cursor = {
-      package = pkgs.google-cursor;
-      name = "GoogleDot-Black";
-      size = 16;
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Modern-Classic";
+      size = 14;
     };
     fonts = {
       sizes.desktop = 12;
