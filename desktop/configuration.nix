@@ -1,11 +1,6 @@
-{
-  pkgs,
-  user,
-  ...
-}: {
-  services.xserver.xkb.layout = "us"; # Configure keymap in X11
+{user, ...}: {
+  imports = [../modules/nixos/vial.nix];
 
-  environment.systemPackages = with pkgs; [vial];
-  services.udev.packages = with pkgs; [vial];
+  services.xserver.xkb.layout = "us"; # Configure keymap in X11
   users.users.${user}.extraGroups = ["users"];
 }
