@@ -1,18 +1,19 @@
-{pkgs, ...}: {
+{pkgs, ...}: let
+  getTheme = name: "${pkgs.base16-schemes}/share/themes/${name}.yaml";
+in {
   stylix = rec {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-material-dark-soft.yaml";
+    base16Scheme = getTheme "gruvbox-material-dark-medium";
     polarity = "dark";
     icons = {
-      enable = true;
       package = pkgs.adwaita-icon-theme;
-      dark = "Adwaita-Dark";
-      light = "Adwaita-Light";
+      dark = "Adwaita";
+      light = "Adwaita";
     };
     cursor = {
       package = pkgs.bibata-cursors;
       name = "Bibata-Modern-Classic";
-      size = 14;
+      size = 10;
     };
     fonts = {
       sizes.desktop = 12;
@@ -37,7 +38,7 @@
         fonts.override.monospace.name = "JetBrainsMono Nerd Font";
       };
       ghostty = {
-        opacity.override.terminal = 0.85;
+        opacity.override.terminal = 0.9;
         fonts.override.monospace.name = "JetBrainsMono Nerd Font";
       };
       wofi.fonts.override.monospace.name = "Nunito";
