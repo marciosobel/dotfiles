@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       "$mod" = "SUPER";
-      "$terminal" = "ghostty";
+      "$terminal" = "GTK_IM_MODULE=simple ghostty";
       "$menu" = "wofi --show=drun";
       "$file_explorer" = "nautilus";
 
