@@ -6,6 +6,7 @@ in {
     base16Scheme = getTheme "gruvbox-material-dark-medium";
     polarity = "dark";
     icons = {
+      enable = true;
       package = pkgs.adwaita-icon-theme;
       dark = "Adwaita";
       light = "Adwaita";
