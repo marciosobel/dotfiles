@@ -4,7 +4,6 @@
     heroic
   ];
 
-  # overrides
   programs.git.settings.user.signingKey = "00A753037271B008";
 
   wayland.windowManager.hyprland.settings = {

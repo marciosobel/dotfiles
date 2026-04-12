@@ -3,7 +3,6 @@
     brightnessctl
   ];
 
-  # overrides
   wayland.windowManager.hyprland.settings = {
     input.kb_layout = "br";
     monitor = ["eDP-1, 1920x1080@60, 0x0, 1"];
