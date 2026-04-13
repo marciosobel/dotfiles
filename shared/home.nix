@@ -26,6 +26,7 @@
     ../modules/hm/direnv.nix
     ../modules/hm/ghostty.nix
     ../modules/hm/btop.nix
+    ../modules/hm/xdg.nix
   ];
 
   home.packages = with pkgs; [
