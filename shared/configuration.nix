@@ -83,10 +83,12 @@
     config = {
       common.default = ["gtk"];
       hyprland.default = ["hyprland" "gtk"];
+      niri.default = ["gnome" "gtk"];
     };
     extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-hyprland
+      xdg-desktop-portal-gnome
     ];
   };
 
