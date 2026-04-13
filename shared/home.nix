@@ -7,7 +7,8 @@
   home.homeDirectory = "/home/${user}";
 
   imports = [
-    ../modules/hm/hyprland.nix
+    # ../modules/hm/hyprland.nix
+    ../modules/hm/niri
     ../modules/hm/git.nix
     ../modules/hm/zen-browser.nix
     ../modules/hm/nixcord.nix

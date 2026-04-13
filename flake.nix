@@ -15,6 +15,10 @@
       url = "github:FlameFlag/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake/beta";
       inputs = {
@@ -43,6 +47,8 @@
           inputs.zen-browser.homeModules.beta
           inputs.nixcord.homeModules.nixcord
           inputs.stylix.homeModules.stylix
+          inputs.niri.homeModules.niri
+          inputs.niri.homeModules.stylix
         ];
       };
     };
