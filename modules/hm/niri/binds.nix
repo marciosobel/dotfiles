@@ -68,8 +68,8 @@
   "Mod+Period".action.expel-window-from-column = [];
   "Mod+Shift+R".action.switch-preset-column-width = [];
   "Mod+F".action.maximize-column = [];
-  "Mod+Shift+F".action.fullscreen-window = [];
-  "Mod+Ctrl+F".action.expand-column-to-available-width = [];
+  "F11".action.fullscreen-window = [];
+  "Mod+Shift+F".action.expand-column-to-available-width = [];
   "Mod+Ctrl+C".action.center-column = [];
   "Mod+Shift+C".action.center-visible-columns = [];
   "Mod+Minus".action.set-column-width = ["-10%"];
