@@ -1,6 +1,8 @@
 {pkgs, ...}: {
   home.packages = [pkgs.xwayland-satellite];
 
+  imports = [./polkit.nix];
+
   programs.niri = {
     enable = true;
     package = pkgs.niri;
