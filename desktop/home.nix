@@ -15,12 +15,17 @@
   };
 
   programs.waybar.settings.main = {
-    modules-left = ["custom/icon" "hyprland/workspaces"];
+    modules-left = [
+      "custom/icon"
+      "hyprland/workspaces"
+      "niri/workspaces"
+    ];
     modules-center = ["clock"];
     modules-right = [
       "tray"
       "mpris"
       "hyprland/language"
+      "niri/language"
       "privacy"
       "network"
     ];

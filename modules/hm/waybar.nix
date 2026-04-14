@@ -4,18 +4,16 @@
     settings = {
       main = {
         # settings
-        position = "top";
-        height = 30;
+        layer = "top";
+        position = "left";
+        width = 30;
         fixed-center = true;
         spacing = 10;
 
         # modules
         "custom/icon".format = "";
         tray.spacing = 10;
-        privacy = {
-          icon-size = 14;
-          modules = [{type = "screenshare";}];
-        };
+
         "hyprland/language" = {
           format-pt = "br";
           format-en = "en";
@@ -26,6 +24,23 @@
             active = "■";
             default = "□";
           };
+        };
+
+        "niri/workspaces" = {
+          format = "{icon}";
+          format-icons = {
+            active = "■";
+            default = "□";
+          };
+        };
+        "niri/language" = {
+          format-pt = "br";
+          format-en = "en";
+        };
+
+        privacy = {
+          icon-size = 14;
+          modules = [{type = "screenshare";}];
         };
         battery = {
           interval = 60;
@@ -42,9 +57,10 @@
           format-disconnected = "";
         };
         clock = {
-          format = "{:%A %H:%M}";
-          format-alt = "{:%H:%M}";
+          format = "{:%H\n%M}";
+          format-alt = "{:%H\n%M}";
           tooltip-format = "<tt>{calendar}</tt>";
+          locale = "en_US.UTF-8";
           calendar = {
             mode-mon-col = 3;
             format = {
@@ -81,10 +97,11 @@
           format = "{status_icon} {title}";
           format-paused = "{status_icon} {title}";
           interval = 1;
+          rotate = 270;
           status-icons = {
-            playing = "";
-            paused = "";
-            stopped = "";
+            playing = " ";
+            paused = " ";
+            stopped = " ";
           };
         };
       };
@@ -103,21 +120,21 @@
       }
 
       .modules-left {
-        padding-left: 10px;
+        padding-top: 5px;
       }
 
       .modules-right {
-        padding-right: 10px;
+        padding-bottom: 5px;
       }
 
       #workspaces {
-        margin-left: 5px;
+        margin-bottom: 5px;
       }
 
       #workspaces button {
         all: unset;
-        padding-right: 10px;
-        margin-bottom: 2px;
+        padding-right: 0px;
+        margin-bottom: 0px;
         font-size: 12px;
         transition: all .1s ease;
         opacity: 0.5;

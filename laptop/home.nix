@@ -11,7 +11,10 @@
   programs.git.settings.user.signingKey = "E7F2E29E35A796E7";
 
   programs.waybar.settings.main = {
-    modules-left = ["custom/icon" "hyprland/workspaces"];
+    modules-left = [
+      "custom/icon"
+      "niri/workspaces"
+    ];
     modules-center = ["clock"];
     modules-right = [
       "tray"

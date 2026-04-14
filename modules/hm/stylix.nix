@@ -25,23 +25,17 @@ in {
       };
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono Nerd Font Propo";
+        name = "JetBrainsMono Nerd Font";
       };
     };
     targets = {
       waybar = {
         font = "sansSerif";
-        fonts.override.sansSerif.name = "${fonts.sansSerif.name}, ${fonts.monospace.name}";
+        fonts.override.sansSerif.name = "${fonts.sansSerif.name}, ${fonts.monospace.name} Propo";
         addCss = false;
       };
-      kitty = {
-        opacity.override.terminal = 0.95;
-        fonts.override.monospace.name = "JetBrainsMono Nerd Font";
-      };
-      ghostty = {
-        opacity.override.terminal = 0.9;
-        fonts.override.monospace.name = "JetBrainsMono Nerd Font";
-      };
+      kitty.opacity.override.terminal = 0.95;
+      ghostty.opacity.override.terminal = 0.95;
       wofi.fonts.override.monospace.name = "Nunito";
       cava.rainbow.enable = true;
       obsidian.fonts.override.sizes.applications = 16;
