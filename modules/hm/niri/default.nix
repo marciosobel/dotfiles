@@ -35,7 +35,7 @@
         focus-ring.enable = false;
         border = {
           enable = true;
-          width = 2;
+          width = 1;
         };
       };
 
