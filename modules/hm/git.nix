@@ -41,7 +41,7 @@
 
       interactive.singlekey = true;
       push.autoSetupRemote = true;
-      branch.sort = "-commiterdate";
+      branch.sort = "-committerdate";
       tag.sort = "-taggerdate";
       init.defaultBranch = "dev";
       credential.helper = "manager";
