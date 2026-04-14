@@ -4,11 +4,11 @@
     settings = {
       global = {
         follow = "keyboard";
-        width = "(0, 500)";
+        width = "(300, 500)";
         frame_width = 1;
         notification_limit = 5;
-        origin = "top-center";
-        offset = "(0, -30)";
+        origin = "bottom-right";
+        offset = "(15, 15)";
 
         corner_radius = 0;
         icon_corner_radius = 0;
