@@ -26,13 +26,14 @@
           {proportion = 1. / 3.;}
           {proportion = 1. / 2.;}
           {proportion = 2. / 3.;}
+          {proportion = 1.0;}
         ];
-        default-column-width = {proportion = 0.5;};
+        default-column-width = {proportion = 1.0;};
 
         focus-ring.enable = false;
         border = {
           enable = true;
-          width = 1;
+          width = 2;
         };
       };
 
