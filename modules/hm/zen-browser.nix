@@ -33,6 +33,7 @@ in {
         "c6813222-6571-4ba6-8faf-58f3343324f6" # Disable Rounded Corners
         "906c6915-5677-48ff-9bfc-096a02a72379" # Floating Status Bar
         "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec" # Cleaned URL Bar
+        "f50841b2-5e4a-4534-985d-b7f7b96088c2" # No Highlight Split
       ];
 
       settings = {
