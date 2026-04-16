@@ -9,10 +9,7 @@
     settings = {
       input = {
         keyboard = {
-          xkb = {
-            layout = "us,br";
-            options = "grp:win_space_toggle";
-          };
+          xkb.options = "grp:win_space_toggle";
           numlock = true;
         };
 
