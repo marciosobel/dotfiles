@@ -48,8 +48,10 @@
             warning = 30;
             critical = 15;
           };
-          format = "{capacity}%  {icon}";
+          format = "{icon}";
+          tooltip-format = "{capacity}% ({timeTo})";
           format-icons = ["󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹"];
+          format-time = "{H}h {M}m";
           max-length = 25;
         };
         network = {
@@ -86,6 +88,9 @@
         "custom/sun" = {
           format = "";
           tooltip = false;
+        };
+        "backlight/slider" = {
+          orientation = "vertical";
         };
         "group/brightness" = {
           "orientation" = "inherit";
@@ -155,8 +160,8 @@
       }
 
       #backlight-slider trough {
-        min-height: 10px;
-        min-width: 80px;
+        min-width: 10px;
+        min-height: 80px;
         background: @base01;
         border: 0;
         border-radius: 0;
