@@ -71,9 +71,9 @@ in {
 
       pinsForce = true;
       pins = {
-        "Youtube Music" = {
-          id = "15a81583-a280-4774-8817-df22796e4d65";
-          url = "https://music.youtube.com/";
+        "TIDAL" = {
+          id = "e5c33780-4888-4a16-85e7-a011a3cdd2c6";
+          url = "https://tidal.com/";
           isEssential = true;
           container = containers.personal.id;
           position = 100;
