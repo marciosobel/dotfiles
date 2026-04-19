@@ -2,6 +2,7 @@
   home.packages = with pkgs; [
     krita
     heroic
+    handbrake
   ];
 
   programs.git.settings.user.signingKey = "00A753037271B008";
