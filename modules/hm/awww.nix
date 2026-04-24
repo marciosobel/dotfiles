@@ -1,4 +1,4 @@
 {pkgs, ...}: {
-  services.swww.enable = true;
+  services.awww.enable = true;
   home.packages = [pkgs.waypaper];
 }

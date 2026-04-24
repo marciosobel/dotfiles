@@ -3,6 +3,7 @@
     home = relative-path: "${config.home.homeDirectory}/${relative-path}";
   in {
     enable = true;
+    setSessionVariables = true;
 
     download = home "downloads";
     documents = home "documents";
