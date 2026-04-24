@@ -3,6 +3,7 @@
     krita
     heroic
     handbrake
+    prismlauncher
   ];
 
   programs.git.settings.user.signingKey = "00A753037271B008";
