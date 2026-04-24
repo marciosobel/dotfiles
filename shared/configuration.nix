@@ -10,6 +10,7 @@
     ../modules/nixos/kernel.nix
     ../modules/nixos/optimize.nix
     ../modules/nixos/docker.nix
+    ../modules/nixos/obs.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
