@@ -11,6 +11,7 @@
     ../modules/nixos/optimize.nix
     ../modules/nixos/docker.nix
     ../modules/nixos/obs.nix
+    ../modules/nixos/davinci-resolve.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
