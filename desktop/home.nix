@@ -1,4 +1,6 @@
 {pkgs, ...}: {
+  imports = [../modules/hm/qutebrowser.nix];
+
   home.packages = with pkgs; [
     krita
     heroic
