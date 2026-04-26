@@ -25,7 +25,6 @@ in {
 
   programs.zen-browser = {
     enable = true;
-    suppressXdgMigrationWarning = true;
 
     profiles.marci = rec {
       mods = [
