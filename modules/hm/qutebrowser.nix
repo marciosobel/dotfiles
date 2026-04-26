@@ -6,6 +6,7 @@
         position = "right";
         width = 200;
       };
+      scrolling.smooth = true;
     };
   };
 }
