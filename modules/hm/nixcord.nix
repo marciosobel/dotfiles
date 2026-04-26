@@ -1,7 +1,14 @@
 {
   programs.nixcord = {
     enable = true;
+    discord.enable = false;
+    vesktop.enable = true;
+
     config = {
+      themeLinks = [
+        "https://raw.githubusercontent.com/KrstlSkll69/vc-snippets/main/OtherStuff/Maxwell.css"
+      ];
+
       plugins = {
         alwaysTrust.enable = true;
         anonymiseFileNames.enable = true;
