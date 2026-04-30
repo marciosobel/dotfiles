@@ -42,6 +42,7 @@
     nautilus
     tidal-hifi
     zathura
+    proton-pass
 
     # TUI
     yazi
