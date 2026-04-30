@@ -43,6 +43,15 @@
       prefer-no-csd = true;
 
       binds = import ./binds.nix;
+      window-rules = [
+        {
+          matches = [
+            {title = "Proton Pass";}
+            {app-id = "io.ente.auth";}
+          ];
+          block-out-from = "screencast";
+        }
+      ];
     };
   };
 }
