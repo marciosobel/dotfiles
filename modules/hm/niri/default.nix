@@ -7,6 +7,8 @@
     enable = true;
     package = pkgs.niri;
     settings = {
+      binds = import ./binds.nix;
+
       input = {
         keyboard = {
           xkb.options = "grp:win_space_toggle";
@@ -16,6 +18,7 @@
         mouse.accel-profile = "flat";
       };
 
+      hotkey-overlay.skip-at-startup = true;
       screenshot-path = "~/pictures/screenshots/%Y-%m-%d %H-%M-%S.png";
 
       layout = {
@@ -37,12 +40,11 @@
 
       spawn-at-startup = [
         {argv = ["waybar"];}
-        {argv = ["swww-daemon"];}
+        {argv = ["awww-daemon"];}
         {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
       ];
       prefer-no-csd = true;
 
-      binds = import ./binds.nix;
       window-rules = [
         {
           matches = [
