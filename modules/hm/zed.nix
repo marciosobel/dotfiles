@@ -30,6 +30,13 @@
         shell.program = "fish";
         toolbar.breadcrumbs = false;
       };
+      agent = {
+        sidebar_side = "right";
+      };
+      titlebar = {
+        show_menus = false;
+        show_user_picture = false;
+      };
     };
   };
 }
