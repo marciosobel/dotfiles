@@ -17,8 +17,6 @@ in {
       size = 24;
     };
     fonts = {
-      sizes.desktop = 12;
-
       sansSerif = {
         package = pkgs.texlivePackages.nunito;
         name = "Nunito";
