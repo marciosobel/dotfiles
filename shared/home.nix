@@ -34,6 +34,8 @@
     grimblast
     kitty
     playerctl
+    unzip
+    unrar
 
     # GUI
     dragon-drop
