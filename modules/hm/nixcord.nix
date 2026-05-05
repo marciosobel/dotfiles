@@ -33,7 +33,6 @@
         petpet.enable = true;
         pictureInPicture.enable = true;
         PinDMs.enable = true;
-        shikiCodeblocks.enable = true;
         spotifyCrack.enable = true;
         typingTweaks.enable = true;
         validReply.enable = true;
