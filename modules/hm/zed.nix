@@ -9,7 +9,6 @@
       "vue"
       "make"
       "proto"
-      "discord-presence"
       "nix"
     ];
 
