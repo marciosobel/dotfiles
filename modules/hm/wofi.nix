@@ -5,7 +5,7 @@
       width = 800;
       allow_images = true;
       image_size = 40;
-      term = "kitty";
+      term = "ghostty";
       insensitive = true;
       location = "center";
       normal_window = false;
