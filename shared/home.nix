@@ -32,7 +32,6 @@
   home.packages = with pkgs; [
     # essential apps and services
     grimblast
-    kitty
     playerctl
     unzip
     unrar
