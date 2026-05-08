@@ -21,10 +21,7 @@ in {
     };
 
     fonts = {
-      sizes = {
-        terminal = 14;
-        popups = 12;
-      };
+      sizes.popups = 12;
       sansSerif = {
         package = pkgs.texlivePackages.nunito;
         name = "Nunito";
