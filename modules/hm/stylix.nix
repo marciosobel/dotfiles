@@ -6,6 +6,8 @@ in {
 
     # while https://github.com/tinted-theming/schemes/pull/98 doesn't get merged in nixpkgs
     base16Scheme = {
+      name = "Everforest Light (Medium)";
+      variant = "light";
       base00 = "#fdf6e3";
       base01 = "#f4f0d9";
       base02 = "#e6e2cc";
