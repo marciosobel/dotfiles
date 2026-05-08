@@ -26,6 +26,9 @@ in {
   programs.zen-browser = {
     enable = true;
 
+    setAsDefaultBrowser = true;
+    enablePrivateDesktopEntry = true;
+
     profiles.marci = rec {
       mods = let
         zenMods = {
@@ -48,6 +51,7 @@ in {
         "zen.urlbar.behavior" = "float";
         "zen.workspaces.separate-essentials" = false;
         "zen.tabs.vertical.right-side" = true;
+        "zen.welcome-screen.seen" = true;
       };
 
       containersForce = true;
