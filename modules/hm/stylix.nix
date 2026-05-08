@@ -43,6 +43,9 @@ in {
       wofi.fonts.override.monospace.name = fonts.sansSerif.name;
       obsidian.fonts.override.sizes.applications = 16;
       helix.opacity.override.terminal = 0;
+      gtk.extraCss = ''
+        * { border-radius: 0px; }
+      '';
     };
   };
 }
