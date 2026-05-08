@@ -15,6 +15,8 @@ in {
       command = "${pkgs.fish}/bin/fish";
       cursor-style = "block";
       link-previews = true;
+      window-inherit-working-directory = false;
+
       custom-shader = shader "cursor_smear";
       custom-shader-animation = true;
     };
