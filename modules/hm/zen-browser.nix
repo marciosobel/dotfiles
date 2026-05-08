@@ -27,12 +27,18 @@ in {
     enable = true;
 
     profiles.marci = rec {
-      mods = [
-        "f7c71d9a-bce2-420f-ae44-a64bd92975ab" # Better Unloaded Tabs
-        "c6813222-6571-4ba6-8faf-58f3343324f6" # Disable Rounded Corners
-        "906c6915-5677-48ff-9bfc-096a02a72379" # Floating Status Bar
-        "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec" # Cleaned URL Bar
-        "f50841b2-5e4a-4534-985d-b7f7b96088c2" # No Highlight Split
+      mods = let
+        zenMods = {
+          betterUnloadedTabs = "f7c71d9a-bce2-420f-ae44-a64bd92975ab";
+          floatingStatusBar = "906c6915-5677-48ff-9bfc-096a02a72379";
+          cleanedURLBar = "a5f6a231-e3c8-4ce8-8a8e-3e93efd6adec";
+          noHighlightSplit = "f50841b2-5e4a-4534-985d-b7f7b96088c2";
+        };
+      in [
+        zenMods.betterUnloadedTabs
+        zenMods.cleanedURLBar
+        zenMods.floatingStatusBar
+        zenMods.noHighlightSplit
       ];
 
       settings = {
