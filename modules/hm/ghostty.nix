@@ -5,7 +5,7 @@
     rev = "main";
     sha256 = "sha256-Z3jF76MnyEGQuzfeZNTyOhpGAiGfhm6rnkdeBIpsJck=";
   };
-  shader = name: "${shaders}/public/shaders/${name}.glsl";
+  getShader = name: "${shaders}/public/shaders/${name}.glsl";
 in {
   programs.ghostty = {
     enable = true;
@@ -17,7 +17,7 @@ in {
       link-previews = true;
       window-inherit-working-directory = false;
 
-      custom-shader = shader "cursor_smear";
+      custom-shader = getShader "cursor_smear";
       custom-shader-animation = true;
     };
   };
