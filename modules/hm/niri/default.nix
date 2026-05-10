@@ -50,6 +50,7 @@
           matches = [
             {title = "Proton Pass";}
             {app-id = "io.ente.auth";}
+            {app-id = "org.telegram.desktop";}
           ];
           block-out-from = "screencast";
         }

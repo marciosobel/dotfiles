@@ -44,6 +44,7 @@
     tidal-hifi
     zathura
     proton-pass
+    telegram-desktop
 
     # TUI
     yazi
