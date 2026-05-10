@@ -1,5 +1,8 @@
 {pkgs, ...}: {
-  home.packages = [pkgs.git-credential-manager];
+  home.packages = [
+    pkgs.git-credential-manager
+    pkgs.delta
+  ];
 
   programs.git = {
     enable = true;
@@ -13,6 +16,7 @@
         compression = 9;
         whitespace = "error";
         preloadindex = true;
+        pager = "delta";
       };
 
       status = {
@@ -34,18 +38,37 @@
       pager = {
         branch = false;
         tag = false;
+        blame = "delta";
+      };
+
+      interactive = {
+        singlekey = true;
+        diffFilter = "delta --color-only";
+      };
+
+      delta = {
+        navigate = true;
+        side-by-side = true;
+        line-numbers = true;
+        hyperlinks = true;
+      };
+
+      merge = {
+        conflictStyle = "zdiff3";
+      };
+
+      credential = {
+        helper = "manager";
+        credentialStore = "gpg";
       };
 
       url."https://github.com/marciosobel/".insteadOf = "me:";
       url."https://github.com/".insteadOf = "gh:";
 
-      interactive.singlekey = true;
       push.autoSetupRemote = true;
       branch.sort = "-committerdate";
       tag.sort = "-taggerdate";
       init.defaultBranch = "dev";
-      credential.helper = "manager";
-      credential.credentialStore = "gpg";
 
       color = {
         branch = {
