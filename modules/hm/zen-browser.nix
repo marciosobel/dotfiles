@@ -17,6 +17,7 @@
     "uBlock0@raymondhill.net" = "ublock-origin";
     "com.program1519.youtube.removeborder@example.com" = "youtube-remove-border-radius";
     "myallychou@gmail.com" = "youtube-recommended-videos"; # Unhook
+    "clipper@obsidian.md" = "web-clipper-obsidian";
   };
 
   zenIcon = name: "chrome://browser/skin/zen-icons/selectable/${name}.svg";
