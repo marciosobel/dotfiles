@@ -10,6 +10,7 @@
       "make"
       "proto"
       "nix"
+      "zig"
     ];
 
     userSettings = {
