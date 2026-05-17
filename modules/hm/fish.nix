@@ -30,6 +30,7 @@
     shellAliases = {
       neofetch = "fastfetch";
       vim = "nvim";
+      zed = "zeditor";
 
       l = "lsd -1A --group-directories-first --color=always";
       ls = "lsd";
