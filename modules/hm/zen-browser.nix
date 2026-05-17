@@ -27,7 +27,6 @@ in {
     enable = true;
 
     setAsDefaultBrowser = true;
-    enablePrivateDesktopEntry = true;
 
     profiles.marci = rec {
       mods = let
