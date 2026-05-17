@@ -39,8 +39,8 @@
       };
 
       spawn-at-startup = [
-        {argv = ["waybar"];}
-        {argv = ["awww-daemon"];}
+        {argv = ["${pkgs.waybar}/bin/waybar"];}
+        {argv = ["${pkgs.awww}/bin/awww-daemon"];}
         {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
       ];
       prefer-no-csd = true;
