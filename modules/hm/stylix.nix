@@ -4,29 +4,29 @@ in {
   stylix = rec {
     enable = true;
 
-    # while https://github.com/tinted-theming/schemes/pull/98 doesn't get merged in nixpkgs
-    base16Scheme = {
-      name = "Everforest Light (Medium)";
-      variant = "light";
-      base00 = "#fdf6e3";
-      base01 = "#f4f0d9";
-      base02 = "#e6e2cc";
-      base03 = "#939f91";
-      base04 = "#829181";
-      base05 = "#5c6a72";
-      base06 = "#475258";
-      base07 = "#2d353b";
-      base08 = "#f85552";
-      base09 = "#f57d26";
-      base0A = "#dfa000";
-      base0B = "#8da101";
-      base0C = "#35a77c";
-      base0D = "#3a94c5";
-      base0E = "#df69ba";
-      base0F = "#829181";
-    };
+    polarity = "dark";
 
-    polarity = "light";
+    # Kanagawa colorscheme. Slightly altered in the red (base08) because
+    # the red from the base16schemes is too dark.
+    base16Scheme = {
+      variant = "dark";
+      base00 = "#1f1f28";
+      base01 = "#16161d";
+      base02 = "#223249";
+      base03 = "#54546d";
+      base04 = "#727169";
+      base05 = "#dcd7ba";
+      base06 = "#c8c093";
+      base07 = "#717c7c";
+      base08 = "#e46876";
+      base09 = "#ffa066";
+      base0A = "#c0a36e";
+      base0B = "#76946a";
+      base0C = "#6a9589";
+      base0D = "#7e9cd8";
+      base0E = "#957fb8";
+      base0F = "#d27e99";
+    };
 
     icons = {
       enable = true;
@@ -37,7 +37,7 @@ in {
 
     cursor = {
       package = pkgs.bibata-cursors;
-      name = "Bibata-Modern-Ice";
+      name = "Bibata-Modern-Classic";
       size = 24;
     };
 
@@ -48,8 +48,8 @@ in {
         name = "Nunito";
       };
       monospace = {
-        package = pkgs.nerd-fonts.iosevka;
-        name = "Iosevka Nerd Font";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font";
       };
     };
 
