@@ -6,7 +6,7 @@
   };
   "Mod+R" = {
     hotkey-overlay.title = "Open launcher";
-    action.spawn = ["wofi" "--show" "drun"];
+    action.spawn = ["noctalia-shell" "ipc" "call" "launcher" "toggle"];
   };
   "Mod+E" = {
     hotkey-overlay.title = "Open file explorer";

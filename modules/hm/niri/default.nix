@@ -47,9 +47,8 @@
       };
 
       spawn-at-startup = [
-        {argv = ["${pkgs.waybar}/bin/waybar"];}
-        {argv = ["${pkgs.awww}/bin/awww-daemon"];}
         {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
+        {argv = ["noctalia-shell"];}
       ];
       prefer-no-csd = true;
 
@@ -61,6 +60,15 @@
             {app-id = "org.telegram.desktop";}
           ];
           block-out-from = "screencast";
+        }
+      ];
+
+      layer-rules = [
+        {
+          matches = [
+            {namespace = "^noctalia-overview";}
+          ];
+          place-within-backdrop = true;
         }
       ];
     };

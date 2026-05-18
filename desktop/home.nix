@@ -1,6 +1,4 @@
 {pkgs, ...}: {
-  imports = [../modules/hm/qutebrowser.nix];
-
   home.packages = with pkgs; [
     krita
     heroic
@@ -9,6 +7,20 @@
   ];
 
   programs.git.settings.user.signingKey = "00A753037271B008";
+
+  programs.noctalia-shell.settings = {
+    bar = {
+      monitors = ["HDMI-A-1"];
+      screenOverrides = [
+        {
+          enabled = false;
+          name = "DP-3";
+          position = "left";
+        }
+      ];
+    };
+    notifications.monitors = ["HDMI-A-1"];
+  };
 
   wayland.windowManager.hyprland.settings = {
     input.kb_layout = "us, br";
