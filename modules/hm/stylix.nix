@@ -1,6 +1,12 @@
-{pkgs, ...}: let
+{
+  pkgs,
+  inputs,
+  ...
+}: let
   getTheme = name: "${pkgs.base16-schemes}/share/themes/${name}.yaml";
 in {
+  imports = [inputs.stylix.homeModules.stylix];
+
   stylix = rec {
     enable = true;
 

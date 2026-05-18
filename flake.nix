@@ -42,14 +42,7 @@
         useUserPackages = true;
         users.${user} = module;
         extraSpecialArgs = {inherit user inputs;};
-        sharedModules = [
-          ./shared/home.nix
-          inputs.zen-browser.homeModules.beta
-          inputs.nixcord.homeModules.nixcord
-          inputs.stylix.homeModules.stylix
-          inputs.niri.homeModules.niri
-          inputs.niri.homeModules.stylix
-        ];
+        sharedModules = [./shared/home.nix];
       };
     };
   in {

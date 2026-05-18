@@ -22,6 +22,7 @@
 
   zenIcon = name: "chrome://browser/skin/zen-icons/selectable/${name}.svg";
 in {
+  imports = [inputs.zen-browser.homeModules.beta];
   stylix.targets.zen-browser.profileNames = ["marci"];
 
   programs.zen-browser = {
