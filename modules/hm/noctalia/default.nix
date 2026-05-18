@@ -55,7 +55,9 @@
       appLauncher = {
         terminalCommand = "ghostty -e";
         viewMode = "list";
-        density = "compact";
+        showCategories = false;
+        enableWindowsSearch = false;
+        enableSessionSearch = false;
       };
 
       controlCenter = {
