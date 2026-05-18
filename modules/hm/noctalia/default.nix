@@ -165,7 +165,7 @@
 
       nightLight = {
         autoSchedule = true;
-        nightTemp = "5660";
+        nightTemp = "5000";
         dayTemp = "6500";
         manualSunrise = "06:30";
         manualSunset = "18:30";
