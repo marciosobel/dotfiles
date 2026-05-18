@@ -42,6 +42,7 @@
         id = "Tray";
         chevronColor = "none";
         colorizeIcons = true;
+        drawerEnabled = false;
       }
       {
         id = "NotificationHistory";
