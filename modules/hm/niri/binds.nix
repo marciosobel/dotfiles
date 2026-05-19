@@ -1,8 +1,8 @@
 {
   "Mod+Shift+Slash".action.show-hotkey-overlay = [];
   "Mod+Q" = {
-    hotkey-overlay.title = "Open ghostty";
-    action.spawn = ["env" "GTK_IM_MODULE=simple" "ghostty"];
+    hotkey-overlay.title = "Open terminal";
+    action.spawn = ["kitty"];
   };
   "Mod+R" = {
     hotkey-overlay.title = "Open launcher";

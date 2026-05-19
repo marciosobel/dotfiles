@@ -26,7 +26,7 @@
     ../modules/hm/zellij.nix
     ../modules/hm/fastfetch.nix
     ../modules/hm/direnv.nix
-    ../modules/hm/ghostty.nix
+    ../modules/hm/kitty.nix
     ../modules/hm/btop.nix
   ];
 
