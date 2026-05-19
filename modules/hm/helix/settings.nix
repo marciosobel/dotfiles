@@ -8,11 +8,6 @@
     scrolloff = 8;
     file-picker.hidden = false;
     inline-diagnostics.cursor-line = "warning";
-    cursor-shape = {
-      insert = "bar";
-      normal = "block";
-      select = "underline";
-    };
   };
 
   keys = {
