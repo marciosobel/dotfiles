@@ -8,9 +8,9 @@
   contentPadding = 0;
   enableExclusionZoneInset = true;
   useSeparateOpacity = false;
-  marginVertical = 8;
-  marginHorizontal = 8;
-  frameThickness = 8;
+  marginVertical = 0;
+  marginHorizontal = 0;
+  frameThickness = 0;
   frameRadius = 0;
   widgets = {
     left = [
