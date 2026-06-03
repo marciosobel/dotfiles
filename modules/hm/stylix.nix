@@ -11,28 +11,7 @@ in {
     enable = true;
 
     polarity = "dark";
-
-    # Kanagawa colorscheme. Slightly altered in the red (base08) because
-    # the red from the base16schemes is too dark.
-    base16Scheme = {
-      variant = "dark";
-      base00 = "#1f1f28";
-      base01 = "#16161d";
-      base02 = "#223249";
-      base03 = "#54546d";
-      base04 = "#727169";
-      base05 = "#dcd7ba";
-      base06 = "#c8c093";
-      base07 = "#717c7c";
-      base08 = "#e46876";
-      base09 = "#ffa066";
-      base0A = "#c0a36e";
-      base0B = "#76946a";
-      base0C = "#6a9589";
-      base0D = "#7e9cd8";
-      base0E = "#957fb8";
-      base0F = "#d27e99";
-    };
+    base16Scheme = getTheme "rose-pine";
 
     icons = {
       enable = true;
@@ -68,11 +47,8 @@ in {
       kitty.opacity.override.terminal = 0.95;
       ghostty.opacity.override.terminal = 0.95;
       wofi.fonts.override.monospace.name = fonts.sansSerif.name;
-      obsidian.fonts.override.sizes.applications = 16;
+      obsidian.fonts.override.sizes.applications = 14;
       helix.opacity.override.terminal = 0;
-      gtk.extraCss = ''
-        * { border-radius: 0px; }
-      '';
     };
   };
 }

@@ -13,6 +13,8 @@
       cursor_trail_start_threshold = 0;
       cursor_blink_interval = 0;
 
+      window_padding_width = 4;
+
       remember_window_size = true;
       resize_in_steps = true;
 

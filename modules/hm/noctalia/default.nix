@@ -2,13 +2,15 @@
   inputs,
   config,
   ...
-}: {
+}: let
+  radius = 12;
+in {
   imports = [inputs.noctalia.homeModules.default];
 
   programs.noctalia-shell = {
     enable = true;
     settings = {
-      bar = import ./bar.nix;
+      bar = import ./bar.nix {inherit radius;};
 
       ui = {
         scrollbarAlwaysVisible = false;
@@ -20,8 +22,11 @@
         avatarImage = "${config.home.homeDirectory}/.face";
         dimmerOpacity = 0;
         enableShadows = false;
-        radiusRatio = 0;
-        iRadiusRatio = 0;
+        showScreenCorners = true;
+        forceBlackScreenCorners = true;
+        scaleRatio = 1;
+        radiusRatio = radius / 10;
+        iRadiusRatio = radius / 10;
         animationSpeed = 2;
         enableBlurBehind = false;
 
@@ -55,9 +60,10 @@
       appLauncher = {
         terminalCommand = "ghostty -e";
         viewMode = "list";
+        iconMode = "native";
         showCategories = false;
         enableWindowsSearch = false;
-        enableSessionSearch = false;
+        enableSettingsSearch = false;
       };
 
       controlCenter = {

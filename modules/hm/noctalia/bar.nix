@@ -1,7 +1,7 @@
-{
+{radius, ...}: {
   position = "right";
-  density = "compact";
-  barType = "framed";
+  density = "default";
+  barType = "simple";
   showCapsule = false;
   fontScale = 1.1;
   widgetSpacing = 4;
@@ -11,7 +11,8 @@
   marginVertical = 0;
   marginHorizontal = 0;
   frameThickness = 0;
-  frameRadius = 0;
+  frameRadius = radius;
+  outerCorners = true;
   widgets = {
     left = [
       {

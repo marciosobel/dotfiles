@@ -42,7 +42,7 @@
         focus-ring.enable = false;
         border = {
           enable = true;
-          width = 1;
+          width = 2;
         };
       };
 
@@ -53,6 +53,17 @@
       prefer-no-csd = true;
 
       window-rules = [
+        {
+          geometry-corner-radius = let
+            radius = 12.;
+          in {
+            bottom-left = radius;
+            bottom-right = radius;
+            top-left = radius;
+            top-right = radius;
+          };
+          clip-to-geometry = true;
+        }
         {
           matches = [
             {title = "Proton Pass";}
