@@ -15,7 +15,7 @@
     "addon@darkreader.org" = "darkreader";
     "78272b6fa58f4a1abaac99321d503a20@proton.me" = "proton-pass";
     "uBlock0@raymondhill.net" = "ublock-origin";
-    "com.program1519.youtube.removeborder@example.com" = "youtube-remove-border-radius";
+    # "com.program1519.youtube.removeborder@example.com" = "youtube-remove-border-radius";
     "myallychou@gmail.com" = "youtube-recommended-videos"; # Unhook
     "clipper@obsidian.md" = "web-clipper-obsidian";
   };
