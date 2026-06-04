@@ -46,6 +46,7 @@
     zathura
     proton-pass
     telegram-desktop
+    pinta
 
     # TUI
     yazi
