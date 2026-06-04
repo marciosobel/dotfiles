@@ -28,6 +28,7 @@
     ../modules/hm/direnv.nix
     ../modules/hm/kitty.nix
     ../modules/hm/btop.nix
+    ../modules/hm/yazi.nix
   ];
 
   home.packages = with pkgs; [
@@ -49,7 +50,6 @@
     pinta
 
     # TUI
-    yazi
     lazygit
     pass
 
