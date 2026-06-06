@@ -27,7 +27,6 @@
         occupiedColor = "primary";
         emptyColor = "primary";
       }
-      {id = "SystemMonitor";}
     ];
     center = [
       {
