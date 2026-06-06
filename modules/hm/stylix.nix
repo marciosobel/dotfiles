@@ -7,6 +7,8 @@
 in {
   imports = [inputs.stylix.homeModules.stylix];
 
+  gtk.gtk4.theme = null;
+
   stylix = rec {
     enable = true;
 
