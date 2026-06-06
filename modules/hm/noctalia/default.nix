@@ -53,6 +53,7 @@ in {
         ["calendar-header-card" "calendar-month-card" "weather-card"];
 
       wallpaper = {
+        enabled = false;
         overviewEnabled = true;
         directory = "${config.xdg.userDirs.pictures}/wallpapers";
       };

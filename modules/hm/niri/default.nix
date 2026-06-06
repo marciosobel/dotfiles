@@ -6,6 +6,7 @@
   home.packages = [pkgs.xwayland-satellite];
 
   imports = [
+    ../awww.nix
     ./polkit.nix
     inputs.niri.homeModules.niri
     inputs.niri.homeModules.stylix
@@ -49,6 +50,7 @@
       spawn-at-startup = [
         {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
         {argv = ["noctalia-shell"];}
+        {argv = ["awww-daemon"];}
       ];
       prefer-no-csd = true;
 
