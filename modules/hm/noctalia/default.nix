@@ -72,11 +72,9 @@ in {
           left = [
             {id = "Network";}
             {id = "Bluetooth";}
-            {id = "WallpaperSelector";}
             {id = "NoctaliaPerformance";}
           ];
           right = [
-            {id = "Notifications";}
             {id = "PowerProfile";}
             {id = "KeepAwake";}
             {id = "NightLight";}
@@ -101,10 +99,6 @@ in {
           }
           {
             id = "weather-card";
-            enabled = true;
-          }
-          {
-            id = "media-sysmon-card";
             enabled = true;
           }
         ];
