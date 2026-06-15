@@ -48,9 +48,11 @@ in {
       };
       kitty.opacity.override.terminal = 0.95;
       ghostty.opacity.override.terminal = 0.95;
+      neovide.opacity.override.terminal = 0.95;
       wofi.fonts.override.monospace.name = fonts.sansSerif.name;
       obsidian.fonts.override.sizes.applications = 14;
       helix.opacity.override.terminal = 0;
+      nvf.transparentBackground = true;
     };
   };
 }
