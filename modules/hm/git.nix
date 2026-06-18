@@ -64,6 +64,7 @@
 
       url."https://github.com/marciosobel/".insteadOf = "me:";
       url."https://github.com/".insteadOf = "gh:";
+      url."ssh://git@codeberg.org/".insteadOf = "cb:";
 
       push.autoSetupRemote = true;
       branch.sort = "-committerdate";
