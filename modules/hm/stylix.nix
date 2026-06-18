@@ -46,6 +46,7 @@ in {
         fonts.override.sansSerif.name = "${fonts.sansSerif.name}, ${fonts.monospace.name} Propo";
         addCss = false;
       };
+      cava.rainbow.enable = true;
       kitty.opacity.override.terminal = 0.95;
       ghostty.opacity.override.terminal = 0.95;
       neovide.opacity.override.terminal = 0.95;
