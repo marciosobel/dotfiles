@@ -20,6 +20,11 @@
       ];
     };
     notifications.monitors = ["HDMI-A-1"];
+    idle = {
+      lockTimeout = 600;
+      screenOffTimeout = 0;
+      suspendTimeout = 0;
+    };
   };
 
   wayland.windowManager.hyprland.settings = {
