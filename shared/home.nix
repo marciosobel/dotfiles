@@ -29,6 +29,7 @@
     ../modules/hm/kitty.nix
     ../modules/hm/btop.nix
     ../modules/hm/yazi.nix
+    ../modules/hm/nvf.nix
   ];
 
   home.packages = with pkgs; [
