@@ -13,40 +13,57 @@
     enable = true;
     settings = {
       vim = {
-        keymaps = [];
-        maps = {
-          normal = {
-            "<leader>fd" = {
-              action = ''
-                function()
-                  vim.diagnostic.open_float({ border = "rounded" })
-                end
-              '';
-              lua = true;
-              desc = "Show diagnostics";
-            };
-            "<C-d>".action = "<C-d>zz";
-            "<C-u>".action = "<C-u>zz";
-            "n".action = "nzzzv";
-            "N".action = "Nzzzv";
-            "<leader>y" = {
-              action = ''"+y'';
-              desc = "Copy to system clipboard";
-            };
-          };
-          visual = {
-            "<leader>y" = {
-              action = ''"+y'';
-              desc = "Copy to system clipboard";
-            };
-          };
-          select = {
-            "<leader>p" = {
-              action = ''"_dP'';
-              desc = "Paste without overwritting current buffer";
-            };
-          };
-        };
+        keymaps = [
+          {
+            mode = "n";
+            key = "<leader>fd";
+            action = ''
+              function()
+                vim.diagnostic.open_float({ border = "rounded" })
+              end
+            '';
+            lua = true;
+            desc = "Show diagnostics";
+          }
+          {
+            mode = "n";
+            key = "<C-d>";
+            action = "<C-d>zz";
+          }
+          {
+            mode = "n";
+            key = "<C-u>";
+            action = "<C-u>zz";
+          }
+          {
+            mode = "n";
+            key = "n";
+            action = "nzzzv";
+          }
+          {
+            mode = "n";
+            key = "N";
+            action = "Nzzzv";
+          }
+          {
+            mode = ["n" "v" "x"];
+            key = "<leader>y";
+            action = ''"+y'';
+            desc = "Copy to system clipboard";
+          }
+          {
+            mode = "x";
+            key = "<leader>p";
+            action = ''"_dP'';
+            desc = "Paste without overwritting current buffer";
+          }
+          {
+            mode = "x";
+            key = "<C-P>";
+            action = ''"+p'';
+            desc = "Paste from system clipboard";
+          }
+        ];
 
         languages = {
           enableFormat = true;
