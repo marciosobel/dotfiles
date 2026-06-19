@@ -16,17 +16,6 @@
         keymaps = [
           {
             mode = "n";
-            key = "<leader>fd";
-            action = ''
-              function()
-                vim.diagnostic.open_float({ border = "rounded" })
-              end
-            '';
-            lua = true;
-            desc = "Show diagnostics";
-          }
-          {
-            mode = "n";
             key = "<C-d>";
             action = "<C-d>zz";
           }
@@ -98,6 +87,7 @@
           tabstop = 4;
           shiftwidth = 4;
           winborder = "rounded";
+          guicursor = "n-v-c:block,i-ci-ve:block,r-cr-o:hor20";
         };
 
         tabline.nvimBufferline = {
@@ -207,6 +197,13 @@
         lsp = {
           enable = true;
           formatOnSave = true;
+          mappings = {
+            goToDefinition = "gd";
+            goToDeclaration = "gD";
+            renameSymbol = "gr";
+            codeAction = "<leader>ca";
+            openDiagnosticFloat = "<leader>fd";
+          };
         };
 
         dashboard.alpha = {
@@ -260,6 +257,8 @@
             logo = "https://i.pinimg.com/736x/d0/26/b4/d026b408fe43e9b009b28b18648268e6.jpg";
           };
         };
+
+        git.enable = true;
 
         assistant.copilot.enable = true;
       };
