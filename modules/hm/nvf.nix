@@ -104,15 +104,13 @@
 
         telescope = {
           enable = true;
-          setupOpts = {
-            defaults = {
-              color_devicons = true;
-              border = true;
-              layout_config = {
-                horizontal.prompt_position = "bottom";
-              };
-            };
-          };
+          setupOpts.defaults.color_devicons = true;
+          extensions = [
+            {
+              name = "ui-select";
+              packages = [pkgs.vimPlugins.telescope-ui-select-nvim];
+            }
+          ];
         };
 
         autopairs.nvim-autopairs.enable = true;
@@ -226,8 +224,11 @@
           mappings.toggle = "<leader>e";
         };
 
-        utility.preview.markdownPreview = {
-          enable = true;
+        utility = {
+          direnv.enable = true;
+          preview.markdownPreview = {
+            enable = true;
+          };
         };
 
         ui = {
