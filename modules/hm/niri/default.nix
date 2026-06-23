@@ -18,6 +18,13 @@
     settings = {
       binds = import ./binds.nix;
 
+      blur = {
+        enable = true;
+        passes = 2;
+        offset = 12;
+        saturation = 1.0125;
+      };
+
       input = {
         keyboard = {
           xkb.options = "grp:win_space_toggle";
@@ -65,6 +72,7 @@
             top-right = radius;
           };
           clip-to-geometry = true;
+          background-effect.blur = true;
         }
         {
           matches = [
