@@ -34,6 +34,7 @@
         noF1.enable = true;
         noTypingAnimation.enable = true;
         oneko.enable = true;
+        openInApp.enable = true;
         petpet.enable = true;
         pictureInPicture.enable = true;
         PinDMs.enable = true;
