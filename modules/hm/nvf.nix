@@ -65,6 +65,7 @@
           json.enable = true;
           rust.enable = true;
           go.enable = true;
+          zig.enable = true;
 
           vue.enable = true;
           astro.enable = true;
