@@ -5,8 +5,10 @@
 
   programs.nixcord = {
     enable = true;
-    discord.enable = false;
-    vesktop.enable = true;
+    discord = {
+      openASAR.enable = true;
+      krisp.enable = true;
+    };
 
     config = {
       themeLinks = [
@@ -16,7 +18,7 @@
       plugins = {
         alwaysTrust.enable = true;
         anonymiseFileNames.enable = true;
-        betterSessions.enable = true;
+        # betterSessions.enable = true;
         betterUploadButton.enable = true;
         BlurNSFW.enable = true;
         ClearURLs.enable = true;
