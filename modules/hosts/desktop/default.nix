@@ -1,5 +1,6 @@
 {den, ...}: {
   den.hosts.x86_64-linux.desktop = {
+    gitSigningKey = "00A753037271B008";
     keyboardLayout = "us,br";
     displays = {
       DP-3 = {
