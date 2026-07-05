@@ -4,10 +4,11 @@
   ...
 }: {
   den.aspects.editors.nvim = {
-    host,
-    user,
-  }: {
-    homeManager = {pkgs, ...}: {
+    homeManager = {
+      host,
+      pkgs,
+      ...
+    }: {
       imports = [inputs.nvf.homeManagerModules.default];
 
       programs.nvf = {

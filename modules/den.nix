@@ -9,6 +9,7 @@ in {
   imports = [
     # https://den.denful.dev/tutorials/example/#namespaces
     (namespace "laptop" true)
+    (namespace "desktop" true)
 
     # https://den.denful.dev/guides/from-zero-to-den/#step-4-host-configuration-in-den
     inputs.den.flakeModule

@@ -3,6 +3,7 @@
   den,
   ...
 }: let
+  user = "marci";
   cfg = {
     classes = [
       "homeManager"
@@ -12,11 +13,13 @@
     ];
   };
 in {
-  den.aspects.marci = {
+  den.aspects.${user} = {
     includes = [
       <den/primary-user>
       (<den/user-shell> "fish")
-      (<den/unfree> ["castlabs-electron"])
+      (<den/unfree> [
+        "castlabs-electron" # for tidal-hifi
+      ])
       den.aspects.apps.core.gui
     ];
 
@@ -32,5 +35,6 @@ in {
     };
   };
 
-  den.hosts.x86_64-linux.laptop.users.marci = cfg;
+  den.hosts.x86_64-linux.laptop.users.${user} = cfg;
+  den.hosts.x86_64-linux.desktop.users.${user} = cfg;
 }

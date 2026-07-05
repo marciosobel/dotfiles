@@ -49,43 +49,4 @@
     extra-substituters = ["https://noctalia.cachix.org"];
     extra-trusted-public-keys = ["noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="];
   };
-
-  # outputs = {
-  #   self,
-  #   nixpkgs,
-  #   home-manager,
-  #   ...
-  # } @ inputs: let
-  #   user = "marci"; # change if you are adapting this to your own config
-  #   mkHomeManagerModule = module: {
-  #     imports = [home-manager.nixosModules.home-manager];
-  #     home-manager = {
-  #       useGlobalPkgs = true;
-  #       useUserPackages = true;
-  #       users.${user} = module;
-  #       extraSpecialArgs = {inherit user inputs;};
-  #       sharedModules = [./shared/home.nix];
-  #     };
-  #   };
-  # in {
-  #   nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-  #     specialArgs = {inherit user;};
-  #     modules = [
-  #       ./shared/configuration.nix
-  #       ./laptop/configuration.nix
-  #       ./laptop/hardware-configuration.nix
-  #       (mkHomeManagerModule (import ./laptop/home.nix))
-  #     ];
-  #   };
-  #
-  #   nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-  #     specialArgs = {inherit user;};
-  #     modules = [
-  #       ./shared/configuration.nix
-  #       ./desktop/configuration.nix
-  #       ./desktop/hardware-configuration.nix
-  #       (mkHomeManagerModule (import ./desktop/home.nix))
-  #     ];
-  #   };
-  # };
 }

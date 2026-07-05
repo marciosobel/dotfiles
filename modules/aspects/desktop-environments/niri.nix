@@ -4,7 +4,7 @@
   den,
   ...
 }: {
-  den.aspects.desktop-environments.niri = {host}: {
+  den.aspects.desktop-environments.niri = {
     includes = with den.aspects; [
       services.awww
       fonts
@@ -25,7 +25,12 @@
       };
     };
 
-    homeManager = {pkgs, ...}: {
+    homeManager = {
+      host,
+      pkgs,
+      config,
+      ...
+    }: {
       imports = [
         inputs.niri.homeModules.niri
         inputs.niri.homeModules.stylix
@@ -55,7 +60,7 @@
           };
 
           hotkey-overlay.skip-at-startup = true;
-          screenshot-path = "~/pictures/screenshots/%Y-%m-%d %H-%M-%S.png";
+          screenshot-path = "${config.xdg.userDirs.pictures}/screenshots/%Y-%m-%d %H-%M-%S.png";
 
           layout = {
             gaps = 6;
@@ -77,7 +82,6 @@
           spawn-at-startup = [
             # niri for some reason does not auto-start the polkit agent.
             {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
-            {argv = ["noctalia-shell"];}
             {argv = ["awww-daemon"];}
           ];
           prefer-no-csd = true;
@@ -127,10 +131,6 @@
             "Mod+Q" = {
               hotkey-overlay.title = "Open terminal";
               action.spawn = [host.terminal];
-            };
-            "Mod+R" = {
-              hotkey-overlay.title = "Open launcher";
-              action.spawn = ["noctalia-shell" "ipc" "call" "launcher" "toggle"];
             };
             "Mod+E" = {
               hotkey-overlay.title = "Open file explorer";
@@ -251,6 +251,46 @@
           Restart = "on-failure";
           RestartSec = 1;
           TimeoutStopSec = 10;
+        };
+      };
+    };
+
+    with-noctalia = {
+      includes = with den.aspects; [
+        desktop-environments.niri
+        apps.noctalia
+      ];
+
+      homeManager.programs.niri.settings = {
+        spawn-at-startup = lib.mkAfter [
+          {argv = ["noctalia-shell"];}
+        ];
+        binds = {
+          "Mod+R" = {
+            hotkey-overlay.title = "Open launcher";
+            action.spawn = ["noctalia-shell" "ipc" "call" "launcher" "toggle"];
+          };
+        };
+      };
+    };
+
+    with-waybar = {
+      includes = with den.aspects; [
+        desktop-environments.niri
+        services.dunst
+        apps.waybar
+        apps.wofi
+      ];
+
+      homeManager.programs.niri.settings = {
+        spawn-at-startup = lib.mkAfter [
+          {argv = ["waybar"];}
+        ];
+        binds = {
+          "Mod+R" = {
+            hotkey-overlay.title = "Open launcher";
+            action.spawn = ["wofi" "--show" "drun"];
+          };
         };
       };
     };

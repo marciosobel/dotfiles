@@ -1,8 +1,4 @@
-{
-  __findFile,
-  den,
-  ...
-}: {
+{den, ...}: {
   den.hosts.x86_64-linux.laptop = {
     isLaptop = true;
     keyboardLayout = "br";
@@ -20,10 +16,9 @@
     includes = with den.aspects; [
       stylix
       nix
+      xdg
 
-      desktop-environments.niri
-      apps.noctalia
-      services.awww
+      desktop-environments.niri.with-noctalia
 
       development.git
       development.direnv
@@ -41,7 +36,6 @@
       apps.yazi
 
       services.auto-cpufreq
-      xdg
     ];
 
     nixos = {
