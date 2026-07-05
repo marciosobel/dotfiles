@@ -13,6 +13,10 @@
     nixos = {pkgs, ...}: {
       programs.niri.enable = true;
 
+      environment.systemPackages = with pkgs; [
+        xwayland-satellite
+      ];
+
       xdg.portal = {
         enable = true;
         config = {
