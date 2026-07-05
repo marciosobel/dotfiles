@@ -25,7 +25,7 @@
       terminals.kitty
       shells.fish
 
-      editors.nvim
+      editors.nvim.with-plugins
 
       apps.browsers.zen-browser
       apps.discord

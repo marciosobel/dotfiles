@@ -27,12 +27,14 @@
 
       desktop-environments.niri.with-noctalia
 
+      gaming
+
       development.git
       development.direnv
       terminals.kitty
       shells.fish
 
-      editors.nvim
+      editors.nvim.with-plugins
       editors.helix
       editors.zed
 
