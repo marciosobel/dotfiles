@@ -10,6 +10,10 @@
         enable = true;
         defaultEditor = true;
         vimAlias = true;
+
+        # new defaults, supress home manager warnings
+        withRuby = false;
+        withPython3 = false;
       };
     };
 
