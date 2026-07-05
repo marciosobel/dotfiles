@@ -1,8 +1,17 @@
 {
-  description = "A very basic flake";
+  description = "my nixos flake :3";
+
+  outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-lib.follows = "nixpkgs";
+    import-tree.url = "github:denful/import-tree";
+    den.url = "github:denful/den";
+    flake-parts = {
+      inputs.nixpkgs-lib.follows = "nixpkgs-lib";
+      url = "github:hercules-ci/flake-parts";
+    };
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,42 +50,42 @@
     extra-trusted-public-keys = ["noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="];
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    user = "marci"; # change if you are adapting this to your own config
-    mkHomeManagerModule = module: {
-      imports = [home-manager.nixosModules.home-manager];
-      home-manager = {
-        useGlobalPkgs = true;
-        useUserPackages = true;
-        users.${user} = module;
-        extraSpecialArgs = {inherit user inputs;};
-        sharedModules = [./shared/home.nix];
-      };
-    };
-  in {
-    nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit user;};
-      modules = [
-        ./shared/configuration.nix
-        ./laptop/configuration.nix
-        ./laptop/hardware-configuration.nix
-        (mkHomeManagerModule (import ./laptop/home.nix))
-      ];
-    };
-
-    nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit user;};
-      modules = [
-        ./shared/configuration.nix
-        ./desktop/configuration.nix
-        ./desktop/hardware-configuration.nix
-        (mkHomeManagerModule (import ./desktop/home.nix))
-      ];
-    };
-  };
+  # outputs = {
+  #   self,
+  #   nixpkgs,
+  #   home-manager,
+  #   ...
+  # } @ inputs: let
+  #   user = "marci"; # change if you are adapting this to your own config
+  #   mkHomeManagerModule = module: {
+  #     imports = [home-manager.nixosModules.home-manager];
+  #     home-manager = {
+  #       useGlobalPkgs = true;
+  #       useUserPackages = true;
+  #       users.${user} = module;
+  #       extraSpecialArgs = {inherit user inputs;};
+  #       sharedModules = [./shared/home.nix];
+  #     };
+  #   };
+  # in {
+  #   nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
+  #     specialArgs = {inherit user;};
+  #     modules = [
+  #       ./shared/configuration.nix
+  #       ./laptop/configuration.nix
+  #       ./laptop/hardware-configuration.nix
+  #       (mkHomeManagerModule (import ./laptop/home.nix))
+  #     ];
+  #   };
+  #
+  #   nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+  #     specialArgs = {inherit user;};
+  #     modules = [
+  #       ./shared/configuration.nix
+  #       ./desktop/configuration.nix
+  #       ./desktop/hardware-configuration.nix
+  #       (mkHomeManagerModule (import ./desktop/home.nix))
+  #     ];
+  #   };
+  # };
 }

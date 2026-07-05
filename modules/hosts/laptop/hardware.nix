@@ -1,0 +1,36 @@
+{
+  den.aspects.laptop.nixos = {
+    config,
+    lib,
+    modulesPath,
+    ...
+  }: {
+    # configuration extracted from `/etc/nixos/hardware-configuration.nix`.
+    imports = [
+      (modulesPath + "/installer/scan/not-detected.nix")
+    ];
+
+    boot.initrd.availableKernelModules = ["nvme" "xhci_pci" "ahci" "usb_storage" "sd_mod"];
+    boot.initrd.kernelModules = [];
+    boot.kernelModules = ["kvm-amd"];
+    boot.extraModulePackages = [];
+
+    fileSystems."/" = {
+      device = "/dev/disk/by-uuid/16f839a3-f2d2-4a72-95b1-7dfbc632f153";
+      fsType = "ext4";
+    };
+
+    fileSystems."/boot" = {
+      device = "/dev/disk/by-uuid/CCF7-5CA0";
+      fsType = "vfat";
+      options = ["fmask=0077" "dmask=0077"];
+    };
+
+    swapDevices = [
+      {device = "/dev/disk/by-uuid/f544c21f-699e-4ab6-902f-71bba23d2c72";}
+    ];
+
+    nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+    hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  };
+}
