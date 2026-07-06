@@ -31,6 +31,7 @@
 
       development.git
       development.direnv
+      development.zellij
       terminals.kitty
       shells.fish
 

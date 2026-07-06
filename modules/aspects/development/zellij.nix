@@ -1,5 +1,5 @@
 {
-  den.aspects.apps.zellij = {host, ...}: {
+  den.aspects.development.zellij = {host, ...}: {
     homeManager = {
       programs.zellij = {
         enable = true;
