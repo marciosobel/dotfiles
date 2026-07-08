@@ -81,6 +81,7 @@
                 typescript.enable = true;
                 css.enable = true;
                 html.enable = true;
+                tsx.enable = true;
                 json.enable = true;
                 rust.enable = true;
                 go.enable = true;
