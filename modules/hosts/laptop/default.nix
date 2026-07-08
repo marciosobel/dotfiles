@@ -1,4 +1,4 @@
-{den, ...}: {
+{__findFile, ...}: {
   den.hosts.x86_64-linux.laptop = {
     isLaptop = true;
     keyboardLayout = "br";
@@ -13,31 +13,40 @@
   };
 
   den.aspects.laptop = {
-    includes = with den.aspects; [
-      stylix
-      nix
-      xdg
+    includes = [
+      <gems/wm/niri/with-noctalia>
+      <gems/development>
+      <gems/optimisations>
+      <gems/gaming/min>
 
-      desktop-environments.niri.with-noctalia
-
-      development.git
-      development.direnv
-      development.zellij
-      terminals.kitty
-      shells.fish
-
-      editors.nvim.with-plugins
-
-      apps.browsers.zen-browser
-      apps.discord
-      apps.obsidian
-      apps.fastfetch
-      apps.cava
-      apps.btop
-      apps.yazi
-
-      services.auto-cpufreq
+      <shards/services/auto-cpufreq>
     ];
+
+    # includes = with den.aspects; [
+    #   stylix
+    #   nix
+    #   xdg
+    #
+    #   desktop-environments.niri.with-noctalia
+    #
+    #   development.git
+    #   development.direnv
+    #   development.zellij
+    #   terminals.kitty
+    #   shells.fish
+    #
+    #   editors.nvim.with-plugins
+    #
+    #   apps.browsers.zen-browser
+    #   apps.discord
+    #   apps.obsidian
+    #   apps.fastfetch
+    #   apps.cava
+    #   apps.btop
+    #   apps.yazi
+    #
+    #   services.auto-cpufreq
+    # ];
 
     nixos = {
       host,

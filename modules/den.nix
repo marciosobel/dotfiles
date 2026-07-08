@@ -8,6 +8,9 @@ in {
   _module.args.__findFile = den.lib.__findFile;
   imports = [
     # https://den.denful.dev/tutorials/example/#namespaces
+    (namespace "shards" false)
+    (namespace "gems" false)
+
     (namespace "laptop" true)
     (namespace "desktop" true)
 

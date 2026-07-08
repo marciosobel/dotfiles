@@ -21,8 +21,9 @@ currently, the only way to run this flake is with either the `#laptop` or the
 speaking of which, the configuration can be found in the [`modules`](./modules)
 folder. the modules are split into these categories:
 
-- [`aspects/`](./modules/aspects): configuration for each app. if you want to
+- [`shards/`](./modules/aspects): configuration for each app. if you want to
   change some setting, it's probably there.
+- [`gems/`](./modules/gems): collection of pre-built configurations.
 - [`hosts/`](./modules/hosts/): the configuration for each of my machines and
   other exported namespaces. for my machines, each will contain a `default.nix`
   with all of its own configurations, and a `hardware.nix` that will have the
@@ -35,17 +36,17 @@ you can also find pre-defined configurations set for every host and user in
 [`defaults.nix`](./modules/defaults.nix).
 
 since this configuration follows the denditric pattern, it is built using
-_aspects_, like lego blocks. every file in the `aspects/` folder contain a
-`den.aspects` definition, that will then be imported by a host or an user (that
-are are aspects as well). an aspect can be named whatever and the file be placed
-wherever within the `modules/` folder, what truly matters is the aspect name in
-the file. i chose to keep the name of the aspect the same of the file, and
-nested aspects into folders (such as `desktop-environments.*`) to ease
+_shards_, like lego blocks. every file in the `shards/` folder contain a
+`shards.<shard_name>` definition, that will then be imported by a host or an
+user (that are are aspects as well). a shard can be named whatever and the file
+be placed wherever within the `modules/` folder, what truly matters is the shard
+name defined in the file. i chose to keep the name of the aspect the same of the
+file, and nested shards into folders (such as `shards.apps.*`) to ease
 navigation.
 
 while i don't make this flake configurable (as you being able to use specific
-modules, e.g. the `waybar` config), keep in mind that it is made specifically
-_for my needs_.
+modules, e.g. the `niri` config), keep in mind that it is made specifically _for
+my needs_.
 
 > [!CAUTION]
 > **DO NOT** run this flake or you might need to rollback your OS (due to

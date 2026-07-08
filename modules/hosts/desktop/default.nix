@@ -1,4 +1,4 @@
-{den, ...}: {
+{__findFile, ...}: {
   den.hosts.x86_64-linux.desktop = {
     gitSigningKey = "00A753037271B008";
     keyboardLayout = "us,br";
@@ -20,37 +20,15 @@
   };
 
   den.aspects.desktop = {
-    includes = with den.aspects; [
-      stylix
-      nix
-      xdg
+    includes = [
+      <gems/wm/niri/with-noctalia>
+      <gems/gaming/full>
+      <gems/development>
+      <gems/optimisations>
 
-      desktop-environments.niri.with-noctalia
-
-      gaming
-
-      development.git
-      development.direnv
-      development.zellij
-      terminals.kitty
-      shells.fish
-
-      editors.nvim.with-plugins
-      editors.helix
-      editors.zed
-
-      apps.browsers.zen-browser
-      apps.davinci-resolve
-      apps.vial
-      apps.discord
-      apps.obsidian
-      apps.obs
-      apps.fastfetch
-      apps.cava
-      apps.btop
-      apps.yazi
-
-      services.opentabletdriver
+      <shards/apps/davinci-resolve>
+      <shards/apps/obs>
+      <shards/services/opentabletdriver>
     ];
   };
 }
