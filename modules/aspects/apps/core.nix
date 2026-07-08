@@ -26,6 +26,7 @@
         bat
         fzf
         ripgrep
+        fd
       ];
     };
 
