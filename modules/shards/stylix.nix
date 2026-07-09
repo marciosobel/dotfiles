@@ -38,9 +38,6 @@
     };
 
     homeManager = {pkgs, ...}: {
-      # remove warning from home-manager.
-      gtk.gtk4.theme = null;
-
       stylix = {
         enable = true;
         targets = {
