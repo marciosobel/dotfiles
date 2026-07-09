@@ -294,7 +294,10 @@
                 };
               };
 
-              git.enable = true;
+              git = {
+                enable = true;
+                gitsigns.setupOpts.current_line_blame = true;
+              };
 
               assistant.copilot.enable = true;
             };
