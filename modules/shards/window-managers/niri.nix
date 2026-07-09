@@ -83,11 +83,6 @@
             };
           };
 
-          spawn-at-startup = [
-            # niri for some reason does not auto-start the polkit agent.
-            {argv = ["${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1"];}
-            {argv = ["awww-daemon"];}
-          ];
           prefer-no-csd = true;
 
           window-rules = [
@@ -234,66 +229,6 @@
             "Mod+Ctrl+7".action.move-column-to-workspace = 7;
             "Mod+Ctrl+8".action.move-column-to-workspace = 8;
             "Mod+Ctrl+9".action.move-column-to-workspace = 9;
-          };
-        };
-      };
-
-      # source: https://wiki.nixos.org/wiki/Polkit#Using_Home_Manager
-      # niri for some reason does not auto-start the polkit agent.
-      systemd.user.services.polkit-gnome-authentication-agent-1 = {
-        Unit = {
-          Description = "polkit-gnome-authentication-agent-1";
-          Wants = ["graphical-session.target"];
-          After = ["graphical-session.target"];
-        };
-        Install = {
-          WantedBy = ["graphical-session.target"];
-        };
-        Service = {
-          Type = "simple";
-          ExecStart = "${pkgs.polkit_gnome}/libexec/polkit-gnome-authentication-agent-1";
-          Restart = "on-failure";
-          RestartSec = 1;
-          TimeoutStopSec = 10;
-        };
-      };
-    };
-
-    with-noctalia = {
-      includes = with shards; [
-        window-managers.niri
-        apps.noctalia
-      ];
-
-      homeManager.programs.niri.settings = {
-        spawn-at-startup = lib.mkAfter [
-          {argv = ["noctalia-shell"];}
-        ];
-        binds = {
-          "Mod+R" = {
-            hotkey-overlay.title = "Open launcher";
-            action.spawn = ["noctalia-shell" "ipc" "call" "launcher" "toggle"];
-          };
-        };
-      };
-    };
-
-    with-waybar = {
-      includes = with shards; [
-        desktop-environments.niri
-        services.dunst
-        apps.waybar
-        apps.wofi
-      ];
-
-      homeManager.programs.niri.settings = {
-        spawn-at-startup = lib.mkAfter [
-          {argv = ["waybar"];}
-        ];
-        binds = {
-          "Mod+R" = {
-            hotkey-overlay.title = "Open launcher";
-            action.spawn = ["wofi" "--show" "drun"];
           };
         };
       };
