@@ -71,6 +71,14 @@
                   action = ''"+p'';
                   desc = "Paste from system clipboard";
                 }
+                {
+                  mode = "n";
+                  key = "<leader>e";
+                  action = "<cmd>NvimTreeFindFileToggle<CR>";
+                  desc = "Toggle File Explorer";
+                  silent = true;
+                  nowait = true;
+                }
               ];
 
               languages = {
@@ -242,7 +250,13 @@
 
               filetree.nvimTree = {
                 enable = true;
-                mappings.toggle = "<leader>e";
+                setupOpts = {
+                  actions.open_file.quit_on_open = true;
+                  sync_root_with_cwd = true;
+                  disable_netrw = true;
+                  hijack_cursor = true;
+                  renderer.icons.glyphs.git.ignored = "";
+                };
               };
 
               utility = {
