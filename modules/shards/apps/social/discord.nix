@@ -11,10 +11,10 @@
 
       programs.nixcord = {
         enable = true;
-        vesktop.enable = true;
         discord = {
           # NOTE: discord screenshare is broken at current commit.
-          enable = false;
+          enable = true;
+          vencord.enable = true;
           openASAR.enable = true;
           krisp.enable = true;
         };
