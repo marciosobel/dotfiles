@@ -14,7 +14,7 @@
         enableFishIntegration = true;
         settings = {
           shell-integration-features = "no-cursor";
-          command = host.terminal;
+          command = host.shell;
           cursor-style = "block";
           link-previews = true;
           window-inherit-working-directory = false;
