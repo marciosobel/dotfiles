@@ -4,10 +4,12 @@
       (<den/unfree> ["obsidian"])
     ];
 
-    homeManager = {
+    homeManager = {config, ...}: let
+      vaultsPath = "${config.xdg.userDirs.documents}/obsidian";
+    in {
       programs.obsidian = {
         enable = true;
-        vaults."obsidian/personal".enable = true;
+        vaults."${vaultsPath}/personal".enable = true;
         defaultSettings = {
           app = {
             zoomLevel = 120;
